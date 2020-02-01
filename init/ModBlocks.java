@@ -21,23 +21,5 @@ public class ModBlocks {
 	
 	@EventBusSubscriber(modid = MainMod.MODID)
 	public static class RegistrationHandler {
-		
-		@SubscribeEvent
-		public static void onEvent(final RegistryEvent.Register<Block> event) {
-			final Block[] blocks = {
-					Utilities.setBlockName(new BlockElderStone(), "elder_stone")
-			};
-			
-			event.getRegistry().registerAll(blocks);
-		}
-		
-		@SubscribeEvent
-		public static void registerItemBlocks(final RegistryEvent.Register<Item> event) {
-			final Item[] items = {
-					Utilities.setItemName(new ItemBlock(ELDER_STONE), ELDER_STONE.getRegistryName().getResourcePath())
-			};
-			
-			event.getRegistry().registerAll(items);
-		}
 	}
 }

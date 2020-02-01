@@ -22,7 +22,7 @@ public class MainMod {
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-        
+		
 	}
 
 	@EventHandler

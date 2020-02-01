@@ -16,19 +16,4 @@ public class ModItems {
 
 	public static final ItemTemp TEMP_ITEM = null;
 
-
-	@Mod.EventBusSubscriber(modid = MainMod.MODID)
-	public static class RegistrationHandler {
-		
-		@SubscribeEvent
-		public static void registerItems(Register<Item> event) {
-			final Item[] items = {
-					Utilities.setItemName(new ItemTemp(), "temp_item")
-			};
-
-			event.getRegistry().registerAll(items);
-		}
-		
-	}
-	
 }
