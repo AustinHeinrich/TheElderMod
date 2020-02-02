@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import theElderMod.init.ModWorldGen;
 
 @Mod(modid = MainMod.MODID, name = MainMod.NAME, version = MainMod.VERSION, 
 acceptedMinecraftVersions = MainMod.MC_VERSION)
@@ -20,14 +21,17 @@ public class MainMod {
 
 	public static final Logger LOGGER = LogManager.getLogger(MainMod.MODID);
 
+	// TODO Fill out inits
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		ModWorldGen.registerDimensions();
 		
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		LOGGER.info(MainMod.NAME + "says hi!");
+		ModWorldGen.registerWorldGenerators();
 	}
 
 	@EventHandler
