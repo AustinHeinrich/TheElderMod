@@ -1,5 +1,7 @@
-package the_elder;
+package kobolds.the_elder;
 
+import kobolds.the_elder.tabs.ElderTab;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -16,6 +18,8 @@ public class Elder
     public static final String VERSION = "0.0.3";
     public static final String MC_VERSION = "[1.12.2]";
 
+    public static final CreativeTabs ELDER_TAB = new ElderTab();
+
     private static Logger logger = LogManager.getLogger(Elder.MODID);
 
     @EventHandler
@@ -26,7 +30,7 @@ public class Elder
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        logger.info(Elder.NAME + "says hi!");
+        logger.info(Elder.NAME + "said hi!");
     }
 
     @EventHandler

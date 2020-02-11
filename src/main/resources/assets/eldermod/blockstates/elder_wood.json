@@ -1,7 +1,7 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "eldermod:elder_stone"
+    "model": "eldermod:elder_wood"
   },
   "variants": {
     "normal": [{}],

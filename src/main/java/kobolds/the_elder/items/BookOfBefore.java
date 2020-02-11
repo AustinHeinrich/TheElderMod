@@ -1,7 +1,8 @@
-package the_elder.items;
+package kobolds.the_elder.items;
 
-import net.minecraft.creativetab.CreativeTabs;
-        import net.minecraft.item.Item;
+import net.minecraft.item.Item;
+
+import kobolds.the_elder.Elder;
 
 /*
   BookOfBefore is a book the player can right-click to gain info about the mod
@@ -13,6 +14,6 @@ public class BookOfBefore extends Item {
 
     public BookOfBefore() {
         super();
-        setCreativeTab(CreativeTabs.MISC);
+        setCreativeTab(Elder.ELDER_TAB);
     }
 }
