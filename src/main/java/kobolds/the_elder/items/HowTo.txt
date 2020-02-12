@@ -1,0 +1,21 @@
+Adding a new item
+
+1. Make the class, extend Item for a blank slate or extend Item___ to use a preexisting item as a base
+
+2. In the main function add setCreativeTab(Elder.ELDER_TAB)
+
+
+Registering the block
+
+1. In init.ModBlocks add the following where it fits alphabetically
+
+   public static final ItemName ITEM_NAME = null;
+
+   replacing ItemName and Item_NAME with the relevant names
+
+2. In EventSubscriber you need to add the block under registerItems
+   In registerItems, add the following to the array "items" NOT "itemBlocks" 
+
+   RegistryUtil.setItemName(new ItemName(), "item_name").setCreativeTab(Elder.ELDER_TAB),
+
+   replacing ItemName and item_name with the relevant names

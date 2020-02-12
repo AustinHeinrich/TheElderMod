@@ -1,0 +1,27 @@
+Adding a new block
+
+1. Make the class, extend Block for a blank slate or extend Block____ to use a preexisting block as a base
+
+
+
+Registering the block
+
+1. In init.ModBlocks add the following where it fits alphabetically
+
+   public static final BlockName BLOCK_NAME = null;
+
+   replacing BlockName and BLOCK_NAME with the relevant names
+
+2. In EventSubscriber you need to add the block under registerBlocks and registerItems
+
+3. In registerBlocks, add the following to the array "blocks"
+
+   RegistryUtil.setBlockName(new BlockName(), "block_name"),
+
+   replacing BlockName and "block_name" with the relevant names
+
+4. In registerItems, add the following to the array "itemBlocks" NOT "items"
+
+   new ItemBlock(ModBlocks.BLOCK_NAME).setRegistryName(ModBlocks.BLOCK_NAME.getRegistryName()),
+
+   replacing BLOCK_NAME with the relevant name
