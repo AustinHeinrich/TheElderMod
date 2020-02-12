@@ -1,0 +1,9 @@
+# Items
+item.eldermod.book_of_before.name=Book Of Before
+
+# Blocks
+tile.eldermod.elder_stone.name=Elder Stone
+tile.eldermod.elder_wood.name=Elder Wood
+
+# Tabs
+itemGroup.eldermod=The Elder
