@@ -26,6 +26,7 @@ public class Elder
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+        EventSubscriber.otherRegistries();
     }
 
     @EventHandler
