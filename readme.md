@@ -27,6 +27,6 @@ Creative.
 
 6) Once loaded into the world, press 'e' to open the creative menu. At the top
 right press the right arrow button to see our custom "The Elder" creative menu
-tab and two "Hello World"-eqsue blocks.
+tab and two "Hello World"-eqsue blocks, which serve as basic initial tests.
 
 
