@@ -3,6 +3,7 @@ package kobolds.the_elder;
 import kobolds.the_elder.blocks.*;
 import kobolds.the_elder.init.ModBiomes;
 import kobolds.the_elder.init.ModBlocks;
+import kobolds.the_elder.items.ElderTeleporter;
 import kobolds.the_elder.util.RegistryUtil;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -33,6 +34,7 @@ public class EventSubscriber {
     public static void registerItems(Register<Item> event) {
         final Item[] items = {
                 RegistryUtil.setItemName(new BookOfBefore(), "book_of_before").setCreativeTab(CreativeTabs.MISC),
+                RegistryUtil.setItemName(new ElderTeleporter(), "elder_teleporter").setCreativeTab(CreativeTabs.MISC),
         };
 
         final Item[] itemBlocks = {
