@@ -14,10 +14,4 @@ public class ElderDirt extends BlockDirt {
 		super();
 		setCreativeTab(Elder.ELDER_TAB);
 	}
-
-	@Override
-	public boolean canSustainPlant(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing direction, IPlantable plantable)
-	{
-		return true;
-	}
 }
