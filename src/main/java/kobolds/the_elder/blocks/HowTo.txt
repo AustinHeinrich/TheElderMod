@@ -1,6 +1,6 @@
 Adding a new block
 
-1. Make the class, extend Block for a blank slate or extend Block____ to use a preexisting block as a base
+1. Make the class, extend Block for a blank slate
 
 
 
@@ -25,3 +25,14 @@ Registering the block
    new ItemBlock(ModBlocks.BLOCK_NAME).setRegistryName(ModBlocks.BLOCK_NAME.getRegistryName()),
 
    replacing BLOCK_NAME with the relevant name
+
+Giving the block textures
+
+1. add the block to ModelRegistrationHandler
+
+2. In resources/assets/eldermod/models/block, add a .json for your new block following the format of the other blocks
+    Do the same for resources/assets/eldermod/models/blockstates
+
+    You can find names for vanilla textures and example .json files at: https://mcasset.cloud/1.12.2/assets/minecraft
+
+1. add the block to /assets/models/item following the same convention
