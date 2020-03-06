@@ -2,15 +2,13 @@ package kobolds.the_elder.init;
 
 import javax.annotation.Nullable;
 
-import kobolds.the_elder.world.WorldProviderElder;
-import kobolds.the_elder.world.WorldTypeElder;
+import kobolds.the_elder.world.dimension.elder.DimensionElder;
 import net.minecraft.world.DimensionType;
-import net.minecraft.world.WorldType;
 import net.minecraftforge.common.DimensionManager;
 
 public class ModWorldGen {
 	public static final int ELDER_DIM_ID = findFreeDimensionId();
-	public static final DimensionType ELDER_DIM_TYPE = DimensionType.register("Elder", "_elder", ELDER_DIM_ID, WorldProviderElder.class, true);
+	public static final DimensionType ELDER_DIM_TYPE = DimensionType.register("Elder", "_elder", ELDER_DIM_ID, DimensionElder.class, true);
     
     public static final void registerDimensions() {
     	DimensionManager.registerDimension(ELDER_DIM_ID, ELDER_DIM_TYPE);
