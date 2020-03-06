@@ -4,18 +4,14 @@
 
 package kobolds.the_elder.world.gen;
 
-import kobolds.the_elder.init.ModWorldGen;
-import kobolds.the_elder.util.interfaces.IStructure;
-import kobolds.the_elder.world.biomes.BiomeGarden;
+import kobolds.the_elder.init.ModBiomes;
 import kobolds.the_elder.world.gen.generators.WorldGenStructure;
 import net.minecraft.block.Block;
+import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.biome.BiomeDesert;
-import net.minecraft.world.biome.BiomeForest;
-import net.minecraft.world.biome.BiomePlains;
-import net.minecraft.world.biome.BiomeTaiga;
+import net.minecraft.world.biome.*;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -42,30 +38,31 @@ public class WorldGenCustomStructures implements IWorldGenerator {
         }
     }
 
+    // TODO change spawn rate (chance) after alpha
     public void generateElderStructures(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 1, Blocks.GRASS, BiomeGarden.class, BiomePlains.class, BiomeForest.class, BiomeTaiga.class, BiomeDesert.class);
-
-        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 1, Blocks.GRASS, BiomeGarden.class, BiomePlains.class, BiomeForest.class, BiomeTaiga.class, BiomeDesert.class);
+        // chance = 120
+        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
+        // chance = 30
+        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
     }
 
     // chunkX / chunkZ -- particular chunk loaded
     // chance -- % chance of spawning
     // topBlock -- top layer of the biome eg) a grass block in a Field
     // classes -- biomes the structure can spawn in
-    private void generateStructure(WorldGenerator generator, World world, Random random, int chunkX, int chunkZ, int chance, Block topBlock, Class<?>... classes) {
-        ArrayList<Class<?>> classesList = new ArrayList<Class<?>>(Arrays.asList(classes)); // making a list out of all biomes
+    private void generateStructure(WorldGenerator generator, World world, Random random, int chunkX, int chunkZ, int chance, Block topBlock, Biome... biomes) {
+       ArrayList<Biome> biomeList = new ArrayList<Biome>(Arrays.asList(biomes)); // making a list out of all biomes
 
         // calculate appropriate spawn coords within a chunk
-        int x = (chunkX * 16) + random.nextInt(15);
-        int z = (chunkZ * 16) + random.nextInt(15);
+        int x = (chunkX * 16) + 8;
+        int z = (chunkZ * 16) + 8;
         int y = calculateGenerationHeight(world, x, z, topBlock);
         BlockPos position = new BlockPos(x, y, z);
 
         // get the biome at the position
-        Class<?> biome = world.provider.getBiomeForCoords(position).getClass();
+        Biome biome = world.provider.getBiomeForCoords(position);
 
-        // TODO maybe add back: if (world.getWorldType() != WorldType.FLAT)
-        if (classesList.contains(biome)) {
+        if (biomeList.contains(biome)) {
             if (random.nextInt(chance) == 0) {
                 generator.generate(world, random, position);
             }
@@ -85,5 +82,4 @@ public class WorldGenCustomStructures implements IWorldGenerator {
 
         return y;
     }
-
 }
