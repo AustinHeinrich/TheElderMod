@@ -7,17 +7,19 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeProviderSingle;
 import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class DimensionElder extends WorldProvider {
 
-    public DimensionElder() {
-
-        this.biomeProvider = new BiomeProviderSingle(ModBiomes.ELDER_DIMENSION);
+    @Override
+    public void init() {
+        this.hasSkyLight = true;
+        this.biomeProvider = new BiomeProviderElder(this.world.getSeed());
     }
 
     @Override
     public DimensionType getDimensionType() {
-
         return DimensionInit.ELDER;
     }
 
@@ -26,7 +28,7 @@ public class DimensionElder extends WorldProvider {
 
         System.out.println("Creating chunk generator for Elder");
 
-        return new ChunkGeneratorElder(world, true, world.getSeed());
+        return new ChunkGeneratorElder(world, world.getSeed());
     }
 
     @Override
@@ -39,4 +41,6 @@ public class DimensionElder extends WorldProvider {
     public boolean isSurfaceWorld() {
         return false;
     }
+
+
 }

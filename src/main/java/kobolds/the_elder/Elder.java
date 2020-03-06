@@ -1,5 +1,7 @@
 package kobolds.the_elder;
 
+import kobolds.the_elder.init.ModBiomes;
+import kobolds.the_elder.init.ModWorldGen;
 import kobolds.the_elder.proxy.ClientProxy;
 import kobolds.the_elder.proxy.CommonProxy;
 import kobolds.the_elder.tabs.ElderTab;
