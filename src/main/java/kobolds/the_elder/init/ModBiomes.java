@@ -1,5 +1,6 @@
 package kobolds.the_elder.init;
 
+import kobolds.the_elder.world.biomes.BiomeElder;
 import kobolds.the_elder.world.biomes.BiomeGarden;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
@@ -11,10 +12,12 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class ModBiomes {
 	public static final Biome GARDEN = new BiomeGarden();
+	public static final Biome ELDER_DIMENSION = new BiomeElder();
 	
 	public static void registerBiomes() {
 
 		initBiome(GARDEN, "garden", BiomeType.WARM, Type.PLAINS, Type.MAGICAL);
+		initBiome(ELDER_DIMENSION, "Elder", BiomeType.WARM, Type.SPOOKY, Type.DENSE, Type.DRY);
 	}
 	
 	private static Biome initBiome(Biome biome, String name, BiomeType biomeType, Type... types) {
