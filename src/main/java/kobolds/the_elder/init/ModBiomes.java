@@ -1,6 +1,6 @@
 package kobolds.the_elder.init;
 
-import kobolds.the_elder.worldGen.BiomeGarden;
+import kobolds.the_elder.world.biomes.BiomeGarden;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
@@ -13,6 +13,7 @@ public class ModBiomes {
 	public static final Biome GARDEN = new BiomeGarden();
 	
 	public static void registerBiomes() {
+
 		initBiome(GARDEN, "garden", BiomeType.WARM, Type.PLAINS, Type.MAGICAL);
 	}
 	
@@ -22,6 +23,7 @@ public class ModBiomes {
 		BiomeDictionary.addTypes(biome, types);
 		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
 		BiomeManager.addSpawnBiome(biome);
+		System.out.println("Biomes Registered");
 		return biome;
 	}
 }
