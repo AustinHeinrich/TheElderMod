@@ -16,7 +16,7 @@ public class ModBiomes {
 	
 	public static void registerBiomes() {
 
-		initBiome(GARDEN, "garden", BiomeType.WARM, Type.PLAINS, Type.MAGICAL);
+		initBiome(GARDEN, "Garden", BiomeType.WARM, Type.PLAINS, Type.MAGICAL);
 		initBiome(ELDER_DIMENSION, "Elder", BiomeType.WARM, Type.SPOOKY, Type.DENSE, Type.DRY);
 	}
 	
@@ -24,9 +24,8 @@ public class ModBiomes {
 		biome.setRegistryName(name);
 		ForgeRegistries.BIOMES.register(biome);
 		BiomeDictionary.addTypes(biome, types);
-		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
-		BiomeManager.addSpawnBiome(biome);
-		System.out.println("Biomes Registered");
+		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 0));
+		System.out.println("Biome" + name + "Registered");
 		return biome;
 	}
 }

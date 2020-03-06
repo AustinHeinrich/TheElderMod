@@ -9,7 +9,7 @@ import net.minecraft.world.gen.IChunkGenerator;
 public class WorldTypeElder extends WorldType {
 
 	public WorldTypeElder() {
-		super(ModWorldGen.ELDER_NAME);
+		super("Elder");
 	}
 	
 	//@Override

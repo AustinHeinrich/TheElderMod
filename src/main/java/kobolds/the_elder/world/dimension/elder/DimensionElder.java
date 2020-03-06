@@ -10,14 +10,13 @@ import net.minecraft.world.gen.IChunkGenerator;
 
 public class DimensionElder extends WorldProvider {
 
-    public DimensionElder() {
+    public void init() {
 
-        this.biomeProvider = new BiomeProviderSingle(ModBiomes.ELDER_DIMENSION);
+        this.biomeProvider = new BiomeProviderElder(this.world.getSeed());
     }
 
     @Override
     public DimensionType getDimensionType() {
-
         return DimensionInit.ELDER;
     }
 
@@ -26,7 +25,7 @@ public class DimensionElder extends WorldProvider {
 
         System.out.println("Creating chunk generator for Elder");
 
-        return new ChunkGeneratorElder(world, true, world.getSeed());
+        return new ChunkGeneratorElder(world, world.getSeed());
     }
 
     @Override

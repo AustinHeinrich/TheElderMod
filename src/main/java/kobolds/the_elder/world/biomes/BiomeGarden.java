@@ -7,14 +7,20 @@ import net.minecraft.world.gen.feature.WorldGenBirchTree;
 
 import java.util.Random;
 
+import kobolds.the_elder.init.ModBlocks;
+
 public class BiomeGarden extends Biome {
 
 	// TODO: figure out what the parameters for this tree class actually need to be
 	//protected static final WorldGenAbstractTree TREE = new WorldGenElderTree(false, true);
 	
 	public BiomeGarden() {
-		super(new BiomeProperties("Garden").setBaseHeight(0.125F).setHeightVariation(0.05F)
-				.setTemperature(0.8F).setRainfall(0.0F).setRainDisabled()
+		super(new BiomeProperties("Garden")
+				.setBaseHeight(0.125F)
+				.setHeightVariation(0.05F)
+				.setTemperature(0.8F)
+				.setRainfall(0.0F)
+				.setRainDisabled()
 				.setWaterColor(3138975));
 
 		//topBlock = ModBlocks.ELDER_DIRT.getDefaultState();
