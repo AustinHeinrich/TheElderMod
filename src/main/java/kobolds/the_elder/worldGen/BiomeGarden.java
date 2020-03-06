@@ -9,8 +9,8 @@ public class BiomeGarden extends Biome {
 	public BiomeGarden() {
 		super(new BiomeProperties("Garden").setBaseBiome("plains").setRainDisabled().setWaterColor(3138975));
 
-		topBlock = ModBlocks.ELDER_DIRT.getDefaultState();
-		fillerBlock = ModBlocks.ELDER_DIRT.getDefaultState();
+		//topBlock = ModBlocks.ELDER_DIRT.getDefaultState();
+		//fillerBlock = ModBlocks.ELDER_DIRT.getDefaultState();
 	}
 
 }

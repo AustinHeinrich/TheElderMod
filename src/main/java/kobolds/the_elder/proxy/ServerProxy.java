@@ -1,4 +1,4 @@
 package kobolds.the_elder.proxy;
 
-public class ServerProxy {
+public class ServerProxy extends CommonProxy {
 }
