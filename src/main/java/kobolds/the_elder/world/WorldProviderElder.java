@@ -1,4 +1,4 @@
-package kobolds.the_elder.worldGen;
+package kobolds.the_elder.world;
 
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;

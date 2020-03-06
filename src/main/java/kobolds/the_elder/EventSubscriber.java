@@ -48,6 +48,7 @@ public class EventSubscriber {
     }
     
     public static void otherRegistries() {
-    	ModBiomes.registerBiomes();
+
+        ModBiomes.registerBiomes();
     }
 }

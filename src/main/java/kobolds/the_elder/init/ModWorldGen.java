@@ -2,8 +2,8 @@ package kobolds.the_elder.init;
 
 import javax.annotation.Nullable;
 
-import kobolds.the_elder.worldGen.WorldProviderElder;
-import kobolds.the_elder.worldGen.WorldTypeElder;
+import kobolds.the_elder.world.WorldProviderElder;
+import kobolds.the_elder.world.WorldTypeElder;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldType;
 import net.minecraftforge.common.DimensionManager;

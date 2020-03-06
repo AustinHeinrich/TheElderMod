@@ -1,4 +1,4 @@
-package kobolds.the_elder.worldGen;
+package kobolds.the_elder.world.gen.generators;
 
 import java.util.List;
 
