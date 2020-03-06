@@ -13,6 +13,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
@@ -58,16 +59,12 @@ public class EventSubscriber {
         event.getRegistry().registerAll(itemBlocks);
     }
 
-    public static void preInitRegistries() {
+    public static void preInitRegistries(FMLPreInitializationEvent event) {
         ModBiomes.registerBiomes();
 
         DimensionInit.registerDimensions();
     }
 
-    public static void otherRegistries() {
-
-        ModBiomes.registerBiomes();
-    }
 
     public static void serverRegistries(FMLServerStartingEvent event) {
 
