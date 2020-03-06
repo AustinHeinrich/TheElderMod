@@ -2,13 +2,14 @@ package kobolds.the_elder;
 
 import kobolds.the_elder.init.ModBiomes;
 import kobolds.the_elder.init.ModWorldGen;
+import kobolds.the_elder.proxy.ClientProxy;
+import kobolds.the_elder.proxy.CommonProxy;
 import kobolds.the_elder.tabs.ElderTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -24,13 +25,14 @@ public class Elder
 
     private static Logger logger = LogManager.getLogger(Elder.MODID);
 
+    @SidedProxy(clientSide = "kobolds.the_elder.proxy.ClientProxy", serverSide = "kobolds.the_elder.proxy.CommonProxy")
+    public static CommonProxy proxy;
+
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
-        
-        ModBiomes.registerBiomes();
-        ModWorldGen.registerDimensions();
+        EventSubscriber.preInitRegistries(event);
     }
 
     @EventHandler
@@ -41,5 +43,10 @@ public class Elder
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
 
+    }
+
+    @EventHandler
+    public static void serverInit(FMLServerStartingEvent event) {
+        EventSubscriber.serverRegistries(event);
     }
 }
