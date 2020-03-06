@@ -7,11 +7,14 @@ import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeProviderSingle;
 import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class DimensionElder extends WorldProvider {
 
+    @Override
     public void init() {
-
+        this.hasSkyLight = true;
         this.biomeProvider = new BiomeProviderElder(this.world.getSeed());
     }
 
@@ -38,4 +41,6 @@ public class DimensionElder extends WorldProvider {
     public boolean isSurfaceWorld() {
         return false;
     }
+
+
 }
