@@ -17,7 +17,7 @@ public class BiomeGarden extends Biome {
 	public BiomeGarden() {
 		super(new BiomeProperties("Garden")
 				.setBaseHeight(0.125F)
-				.setHeightVariation(5.05F)
+				.setHeightVariation(0.05F)
 				.setTemperature(0.8F)
 				.setRainfall(0.0F)
 				.setRainDisabled()
