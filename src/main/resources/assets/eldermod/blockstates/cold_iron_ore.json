@@ -4,7 +4,7 @@
     "model": "eldermod:cold_iron_ore"
   },
   "variants": {
-    "normal": [{}],
+    "normal": { "model": "eldermod:cold_iron_ore" },
     "inventory": [{}]
   }
 }

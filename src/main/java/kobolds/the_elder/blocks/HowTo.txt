@@ -28,9 +28,11 @@ Registering the block
 
 Giving the block textures
 
-1. In resources/assets/eldermod/models/block, add a .json for your new block following the format of the other blocks
+1. add the block to ModelRegistrationHandler
+
+2. In resources/assets/eldermod/models/block, add a .json for your new block following the format of the other blocks
     Do the same for resources/assets/eldermod/models/blockstates
 
     You can find names for vanilla textures and example .json files at: https://mcasset.cloud/1.12.2/assets/minecraft
 
-2. add the block to /assets/models/item following the same convention
+1. add the block to /assets/models/item following the same convention
