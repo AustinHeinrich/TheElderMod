@@ -36,6 +36,7 @@ public class Elder
     {
         logger = event.getModLog();
         EventSubscriber.preInitRegistries(event);
+        proxy.preInit(event);
     }
 
     @EventHandler

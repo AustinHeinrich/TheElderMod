@@ -1,5 +1,7 @@
 package kobolds.the_elder.world.biomes;
 
+import kobolds.the_elder.entities.EntityTemp;
+import kobolds.the_elder.init.ModEntities;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
@@ -36,7 +38,7 @@ public class BiomeGarden extends Biome {
 		this.spawnableWaterCreatureList.clear();
 
 		// TODO: change this entry to use our actual mobs - this is currently just a test
-		this.spawnableCreatureList.add(new SpawnListEntry(EntityEnderman.class, 10, 1, 5));
+		this.spawnableCreatureList.add(new SpawnListEntry(EntityTemp.class, 10, 1, 5));
 	}
 
 	/*

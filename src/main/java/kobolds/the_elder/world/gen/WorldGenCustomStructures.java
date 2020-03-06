@@ -35,22 +35,22 @@ public class WorldGenCustomStructures implements IWorldGenerator {
             case -1:  // the nether
                 break;
             case 0:   // the overworld
-                generateElderStructures(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
                 break;
             case 1:   // the end
                 break;
             case 2:   // the elder rn
-          }
+                generateElderStructures(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+        }
     }
 
     // TODO change spawn rate (chance) after alpha
     public void generateElderStructures(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         // chance = 140
-        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, Biomes.PLAINS);
+        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, ModBiomes.GARDEN);
         // chance = 40
-        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, Biomes.PLAINS);
+        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, ModBiomes.GARDEN);
         // chance = 150
-        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, Biomes.PLAINS);
+        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, ModBiomes.GARDEN);
     }
 
     // chunkX / chunkZ -- particular chunk loaded
