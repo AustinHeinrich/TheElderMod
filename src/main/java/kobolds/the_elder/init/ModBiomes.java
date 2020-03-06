@@ -14,16 +14,16 @@ public class ModBiomes {
 	
 	public static void registerBiomes() {
 
-		initBiome(GARDEN, "garden", BiomeType.WARM, Type.PLAINS, Type.MAGICAL);
+		initBiome(GARDEN, "Garden", BiomeType.WARM, Type.PLAINS, Type.MAGICAL);
 	}
 	
 	private static Biome initBiome(Biome biome, String name, BiomeType biomeType, Type... types) {
 		biome.setRegistryName(name);
 		ForgeRegistries.BIOMES.register(biome);
 		BiomeDictionary.addTypes(biome, types);
-		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
+		BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 1000));
 		BiomeManager.addSpawnBiome(biome);
-		System.out.println("Biomes Registered");
+		System.out.println("Biome" + name + "Registered");
 		return biome;
 	}
 }

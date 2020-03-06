@@ -19,9 +19,6 @@ public class ElderTeleporter extends Item {
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		ItemStack item =  playerIn.getHeldItem(handIn);
 		int dim = ModWorldGen.ELDER_DIM_ID;
-		if (playerIn.world.provider.getDimension() == dim) {
-			dim = 0; // If already in Elder dimension, go to overworld
-		}
 		playerIn.changeDimension(dim);
 		
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, item);		

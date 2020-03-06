@@ -1,5 +1,7 @@
 package kobolds.the_elder;
 
+import kobolds.the_elder.init.ModBiomes;
+import kobolds.the_elder.init.ModWorldGen;
 import kobolds.the_elder.tabs.ElderTab;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -26,7 +28,9 @@ public class Elder
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
-        EventSubscriber.otherRegistries();
+        
+        ModBiomes.registerBiomes();
+        ModWorldGen.registerDimensions();
     }
 
     @EventHandler

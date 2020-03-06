@@ -46,9 +46,4 @@ public class EventSubscriber {
         event.getRegistry().registerAll(items);
         event.getRegistry().registerAll(itemBlocks);
     }
-    
-    public static void otherRegistries() {
-
-        ModBiomes.registerBiomes();
-    }
 }
