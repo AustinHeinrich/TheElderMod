@@ -1,6 +1,8 @@
 package kobolds.the_elder;
 
 import kobolds.the_elder.blocks.*;
+import kobolds.the_elder.commands.CommandDimensionTeleport;
+import kobolds.the_elder.init.DimensionInit;
 import kobolds.the_elder.init.ModBiomes;
 import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.items.ElderTeleporter;
@@ -11,6 +13,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import kobolds.the_elder.blocks.ElderWood;
@@ -54,9 +57,20 @@ public class EventSubscriber {
         event.getRegistry().registerAll(items);
         event.getRegistry().registerAll(itemBlocks);
     }
-    
+
+    public static void preInitRegistries() {
+        ModBiomes.registerBiomes();
+
+        DimensionInit.registerDimensions();
+    }
+
     public static void otherRegistries() {
 
         ModBiomes.registerBiomes();
+    }
+
+    public static void serverRegistries(FMLServerStartingEvent event) {
+
+        event.registerServerCommand(new CommandDimensionTeleport());
     }
 }

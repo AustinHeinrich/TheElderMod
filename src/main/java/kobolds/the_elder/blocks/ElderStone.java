@@ -12,4 +12,6 @@ public class ElderStone extends Block {
         setCreativeTab(Elder.ELDER_TAB);
         setSoundType(SoundType.STONE);
     }
+
+
 }
