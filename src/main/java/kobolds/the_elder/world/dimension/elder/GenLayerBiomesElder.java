@@ -6,7 +6,7 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
 public class GenLayerBiomesElder extends GenLayer {
-	private Biome[] allowedBiomes = {ModBiomes.GARDEN, ModBiomes.ELDER_DIMENSION};
+	private Biome[] allowedBiomes = {ModBiomes.GARDEN, /*ModBiomes.ELDER_DIMENSION*/};
 	
 	public GenLayerBiomesElder(long seed) {
 		super(seed);
