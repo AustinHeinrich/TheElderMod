@@ -8,4 +8,5 @@ import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 public class ModItems {
 
     public static final Item BOOK_OF_BEFORE = null;
+    public static final Item ELDER_TELEPORTER = null;
 }

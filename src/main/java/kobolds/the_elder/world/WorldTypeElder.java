@@ -1,15 +1,15 @@
-package kobolds.the_elder.worldGen;
+package kobolds.the_elder.world;
 
 import kobolds.the_elder.init.ModWorldGen;
+import kobolds.the_elder.world.gen.generators.ChunkGeneratorElder;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
-import net.minecraft.world.biome.BiomeProvider;
 import net.minecraft.world.gen.IChunkGenerator;
 
 public class WorldTypeElder extends WorldType {
 
 	public WorldTypeElder() {
-		super(ModWorldGen.ELDER_NAME);
+		super("Elder");
 	}
 	
 	//@Override
