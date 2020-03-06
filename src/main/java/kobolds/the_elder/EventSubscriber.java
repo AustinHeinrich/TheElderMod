@@ -22,6 +22,7 @@ public class EventSubscriber {
     @SubscribeEvent
     public static void registerBlocks(Register<Block> event) {
         final Block[] blocks = {
+                RegistryUtil.setBlockName(new ColdIronOre(), "cold_iron_ore"),
                 RegistryUtil.setBlockName(new ElderStone(), "elder_stone"),
                 RegistryUtil.setBlockName(new ElderWood(), "elder_wood"),
                 RegistryUtil.setBlockName(new ElderDirt(), "elder_dirt"),
@@ -38,6 +39,7 @@ public class EventSubscriber {
         };
 
         final Item[] itemBlocks = {
+                new ItemBlock(ModBlocks.COLD_IRON_ORE).setRegistryName(ModBlocks.COLD_IRON_ORE.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_STONE).setRegistryName(ModBlocks.ELDER_STONE.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_WOOD).setRegistryName(ModBlocks.ELDER_WOOD.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_DIRT).setRegistryName(ModBlocks.ELDER_DIRT.getRegistryName()),
