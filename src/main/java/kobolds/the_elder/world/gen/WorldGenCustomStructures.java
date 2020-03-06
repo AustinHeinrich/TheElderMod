@@ -6,6 +6,7 @@ package kobolds.the_elder.world.gen;
 
 import kobolds.the_elder.init.ModBiomes;
 import kobolds.the_elder.world.gen.generators.WorldGenStructure;
+
 import net.minecraft.block.Block;
 import net.minecraft.init.Biomes;
 import net.minecraft.init.Blocks;
@@ -26,6 +27,9 @@ public class WorldGenCustomStructures implements IWorldGenerator {
     public static final WorldGenStructure OLD_ADVENTURER_HOUSE = new WorldGenStructure("old_adventurer's_house");
     public static final WorldGenStructure OLD_WAYTOWER = new WorldGenStructure("old_waytower");
 
+    // pactmakers
+    public static final WorldGenStructure VITALITY_TRADER = new WorldGenStructure("vitality_trading_station");
+
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         switch(world.provider.getDimension()) {
             case -1:  // the nether
@@ -34,16 +38,17 @@ public class WorldGenCustomStructures implements IWorldGenerator {
                 generateElderStructures(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
                 break;
             case 1:   // the end
-
         }
     }
 
     // TODO change spawn rate (chance) after alpha
     public void generateElderStructures(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-        // chance = 120
-        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
-        // chance = 30
-        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
+        // chance = 140
+        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 5, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
+        // chance = 40
+        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 5, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
+        // chance = 150
+        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 5, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
     }
 
     // chunkX / chunkZ -- particular chunk loaded
