@@ -70,6 +70,7 @@ public class EventSubscriber {
     public static void preInitRegistries(FMLPreInitializationEvent event) {
         ModBiomes.registerBiomes();
         DimensionInit.registerDimensions();
+        ModWorldGen.registerCustomStructures();
     }
 
     public static void serverRegistries(FMLServerStartingEvent event) {

@@ -38,17 +38,19 @@ public class WorldGenCustomStructures implements IWorldGenerator {
                 generateElderStructures(random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
                 break;
             case 1:   // the end
-        }
+                break;
+            case 2:   // the elder rn
+          }
     }
 
     // TODO change spawn rate (chance) after alpha
     public void generateElderStructures(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         // chance = 140
-        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 5, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
+        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, Biomes.PLAINS);
         // chance = 40
-        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 5, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
+        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, Biomes.PLAINS);
         // chance = 150
-        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 5, Blocks.GRASS, ModBiomes.GARDEN, Biomes.PLAINS);
+        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 2, Blocks.GRASS, ModBiomes.ELDER_DIMENSION, Biomes.PLAINS);
     }
 
     // chunkX / chunkZ -- particular chunk loaded
