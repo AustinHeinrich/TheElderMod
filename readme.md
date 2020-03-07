@@ -16,7 +16,7 @@ this installation is selected and press "Play".
 navigate to the 'mods' directory. If it was not generated when Minecraft launched,
 create a mods directory.
 
-3) Download the_elder_0.2.jar from this repository and install it in the mod
+3) Download **eldermod-alpha**from this repository and install it in the mod
 directory. 
 
 4) Launch Minecraft. After launching, ensure "The Elder" is loaded in the mod 
@@ -29,4 +29,11 @@ Creative.
 right press the right arrow button to see our custom "The Elder" creative menu
 tab and two "Hello World"-eqsue blocks, which serve as basic initial tests.
 
+7) navigate to the 'Miscellaneous' creative menu tab and scroll all the way to the bottom to find
+an untextured item called "Elder Teleporter" 
+
+8) Put the Elder Teleporter into the hotbar at the bottom, select it, and right click
+
+9) You will have been teleported to our custom dimension, the Elder. Observe our new mob (those tiny worms you
+see everywhere), observe our structures (those buildings you see everywhere)
 
