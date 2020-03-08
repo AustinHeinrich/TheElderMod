@@ -6,12 +6,8 @@ import net.minecraft.world.gen.layer.GenLayer;
 import net.minecraft.world.gen.layer.IntCache;
 
 public class GenLayerBiomesElder extends GenLayer {
-<<<<<<< HEAD
 	private Biome[] closeBiomes = {ModBiomes.ELDER_DIMENSION};
 	private Biome[] farBiomes = {ModBiomes.FAR};
-=======
-	private Biome[] allowedBiomes = {ModBiomes.GARDEN, /*ModBiomes.ELDER_DIMENSION*/};
->>>>>>> development
 	
 	public GenLayerBiomesElder(long seed) {
 		super(seed);
