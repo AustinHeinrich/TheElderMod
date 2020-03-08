@@ -20,8 +20,12 @@ public class ModelRegistrationHandler {
         registerModel(ModItems.BOOK_OF_BEFORE, 0);
 
         // blocks
+        registerModel(Item.getItemFromBlock(ModBlocks.COLD_IRON_ORE), 0);
+        registerModel(Item.getItemFromBlock(ModBlocks.ELDER_DIRT), 0);
         registerModel(Item.getItemFromBlock(ModBlocks.ELDER_STONE), 0);
         registerModel(Item.getItemFromBlock(ModBlocks.ELDER_WOOD), 0);
+        registerModel(Item.getItemFromBlock(ModBlocks.ELDER_WOOD_PLANKS), 0);
+        registerModel(Item.getItemFromBlock(ModBlocks.ELDER_WOOD_STAIRS), 0);
     }
 
     private static void registerModel(Item item, int meta) {
