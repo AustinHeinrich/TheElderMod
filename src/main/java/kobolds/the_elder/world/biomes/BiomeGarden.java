@@ -1,6 +1,7 @@
 package kobolds.the_elder.world.biomes;
 
 import net.minecraft.entity.monster.EntityEnderman;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 import net.minecraft.world.gen.feature.WorldGenBirchTree;
@@ -19,12 +20,11 @@ public class BiomeGarden extends Biome {
 				.setBaseHeight(0.125F)
 				.setHeightVariation(0.05F)
 				.setTemperature(0.8F)
-				.setRainfall(0.0F)
 				.setRainDisabled()
 				.setWaterColor(3138975));
 
-		//topBlock = ModBlocks.ELDER_DIRT.getDefaultState();
-		//fillerBlock = ModBlocks.ELDER_DIRT.getDefaultState();
+		this.topBlock = Blocks.GRASS.getDefaultState();
+		this.fillerBlock = Blocks.OBSIDIAN.getDefaultState();
 
 		this.decorator.treesPerChunk = 2;
 
