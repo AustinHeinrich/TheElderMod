@@ -23,7 +23,6 @@ public class WorldGenCustomTrees
             case 1:
                 break;
             case 0:
-
                 runGenerator(ELDER, world, random, chunkX, chunkZ, 3, -1, 0, BiomeGarden.class);
                 break;
             case -1:
@@ -41,6 +40,7 @@ public class WorldGenCustomTrees
                 chancesToSpawn = 0;
         }
 
+        // TODO change biomes from 'classes' to 'Biomes' -- unnecessary to generate a list of biomes as classes
         ArrayList<Class<?>> classesList = new ArrayList<Class<?>>(Arrays.asList(classes));
         int heightDiff = maxHeight - minHeight + 1;
         for (int i=0; i<chancesToSpawn; i++)
