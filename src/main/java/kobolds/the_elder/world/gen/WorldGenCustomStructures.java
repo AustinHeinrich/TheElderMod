@@ -45,13 +45,14 @@ public class WorldGenCustomStructures implements IWorldGenerator {
     }
 
     public void generateElderStructures(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-        // chance = 260
-        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 260, Blocks.GRASS, ModBiomes.GARDEN);
+        // chance = 400
+        // TODO randomize chest items from treasure table
+        generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 400, Blocks.GRASS, ModBiomes.GARDEN);
         // chance = 110
         generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
         generateStructure(OLD_WAYTOWER_VARIANT, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
-        // chance = 200
-        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 200, Blocks.GRASS, ModBiomes.GARDEN);
+        // chance = 220
+        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 220, Blocks.GRASS, ModBiomes.GARDEN);
 
     }
 
