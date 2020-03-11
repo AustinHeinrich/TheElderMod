@@ -2,6 +2,7 @@ package kobolds.the_elder.world.biomes;
 
 import kobolds.the_elder.entities.EntityTemp;
 import kobolds.the_elder.init.ModEntities;
+import kobolds.the_elder.world.gen.ElderTreeGenerator;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
@@ -14,8 +15,7 @@ import kobolds.the_elder.init.ModBlocks;
 
 public class BiomeGarden extends Biome {
 
-	// TODO: figure out what the parameters for this tree class actually need to be
-	//protected static final WorldGenAbstractTree TREE = new WorldGenElderTree(false, true);
+	protected static final ElderTreeGenerator TREE = new ElderTreeGenerator(false, true);
 	
 	public BiomeGarden() {
 		super(new BiomeProperties("Garden")
@@ -40,10 +40,8 @@ public class BiomeGarden extends Biome {
 		this.spawnableCreatureList.add(new SpawnListEntry(EntityTemp.class, 10, 1, 5));
 	}
 
-	/*
 	@Override
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
 		return TREE;
 	}
-	*/
 }
