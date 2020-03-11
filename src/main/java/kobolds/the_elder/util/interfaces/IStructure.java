@@ -17,6 +17,5 @@ public interface IStructure {
                                                         .setIgnoreEntities(false)
                                                         .setIgnoreStructureBlock(false)
                                                         .setMirror(Mirror.NONE)
-                                                        .setRotation(Rotation.NONE)
-                                                        .setBoundingBox(null);
+                                                        .setRotation(Rotation.NONE);
 }
