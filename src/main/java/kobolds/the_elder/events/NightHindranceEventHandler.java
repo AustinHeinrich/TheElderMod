@@ -21,7 +21,6 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 public class NightHindranceEventHandler {
 
     // send a message when the player enters the Dimension
-    // event - occurs when player changes dimension
     @SubscribeEvent
     public void elderWarning(PlayerEvent.PlayerChangedDimensionEvent event) {
         DimensionElder elderDim = new DimensionElder();
@@ -32,17 +31,16 @@ public class NightHindranceEventHandler {
         }
     }
 
-    //
+    // hinder the player at night in the Elder
     @SubscribeEvent
     public void elderNight(PlayerEvent event) {
         BlockPos pos = new BlockPos(event.player.getPositionVector());
 
+        // at night (13000 is the same as /time set night), give the player certain effects to hinder the,
         if (!event.player.isCreative() && event.player.dimension == DimensionInit.getDimID()) {
-            if (event.player.world.getBiome(pos) == ModBiomes.GARDEN && event.player.world.getWorldTime() > 13000) {
-                System.out.println("test");
-                event.player.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 100, 0));
+            if (event.player.world.getBiome(pos) != ModBiomes.GARDEN && event.player.world.getWorldTime() > 13000) {
+                event.player.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 500, 2));
             }
         }
-
     }
 }
