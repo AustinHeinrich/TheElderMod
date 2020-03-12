@@ -12,9 +12,16 @@ import java.awt.*;
 
 public class DimensionInit {
 
-    public static final DimensionType ELDER = DimensionType.register("Elder", "_elder", 2, DimensionElder.class, false);
+    // unique ID for the Elder
+    private static int dimID = 2;
+
+    public static final DimensionType ELDER = DimensionType.register("Elder", "_elder", dimID, DimensionElder.class, false);
 
     public static void registerDimensions() {
-        DimensionManager.registerDimension(2, ELDER);
+        DimensionManager.registerDimension(dimID, ELDER);
+    }
+
+    public static int getDimID() {
+        return dimID;
     }
 }

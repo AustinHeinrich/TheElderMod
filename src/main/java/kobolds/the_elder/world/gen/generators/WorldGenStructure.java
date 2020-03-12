@@ -1,7 +1,3 @@
-// Austin Heinrich
-// awh055
-// 11177796
-
 package kobolds.the_elder.world.gen.generators;
 
 import kobolds.the_elder.Elder;
