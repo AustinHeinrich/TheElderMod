@@ -7,8 +7,7 @@ import java.util.Locale;
 
 public enum WoodVariant implements IStringSerializable {
 
-    SMALL(BlockPlanks.EnumType.OAK),
-    LARGE(BlockPlanks.EnumType.JUNGLE);
+    ELDER(BlockPlanks.EnumType.JUNGLE);
 
     private final BlockPlanks.EnumType plankType;
 
