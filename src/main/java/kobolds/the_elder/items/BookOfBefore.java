@@ -14,6 +14,6 @@ public class BookOfBefore extends Item {
 
     public BookOfBefore() {
         super();
-        setCreativeTab(Elder.ELDER_TAB);
+
     }
 }
