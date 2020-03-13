@@ -2,6 +2,7 @@ package kobolds.the_elder.world.gen;
 
 import java.util.Random;
 
+import kobolds.the_elder.init.ModBlocks;
 import net.minecraft.block.BlockOldLeaf;
 import net.minecraft.block.BlockOldLog;
 import net.minecraft.block.BlockPlanks;
@@ -14,7 +15,7 @@ import net.minecraft.world.gen.feature.WorldGenMegaPineTree;;
 
 public class ElderTreeGenerator extends WorldGenAbstractTree {
 	//Literally just a Birch Tree with different blocks 
-	private static final IBlockState LOG = Blocks.LOG.getDefaultState();
+	private static final IBlockState LOG = ModBlocks.ELDER_WOOD.getDefaultState();
     private static final IBlockState LEAF = Blocks.LEAVES.getDefaultState();
     private final boolean useExtraRandomHeight;
 
