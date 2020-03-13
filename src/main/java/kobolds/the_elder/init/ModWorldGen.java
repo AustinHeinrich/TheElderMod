@@ -2,7 +2,6 @@ package kobolds.the_elder.init;
 
 import javax.annotation.Nullable;
 
-import kobolds.the_elder.world.WorldTypeElder;
 import kobolds.the_elder.world.gen.WorldGenCustomStructures;
 import kobolds.the_elder.world.dimension.elder.DimensionElder;
 import net.minecraft.world.DimensionType;

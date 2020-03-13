@@ -1,4 +1,4 @@
 Adding Biomes to the new dimension:
 1. Add your new biome class to the Mod Biomes class, as per the biomes already present
-2. Add it to the "allowedBiomes" array in GenLayerBiomesElder
-3. P much it, I don't know how to change how they can spawn yet. I'm tired.
+2. Inside GenLayerBiomesElder, add it to the "closeBiomes" list if you want it to spawn near the spawn biome, 
+   otherwise add it to the "farBiomes" list

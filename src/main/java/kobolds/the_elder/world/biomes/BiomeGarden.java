@@ -1,5 +1,8 @@
 package kobolds.the_elder.world.biomes;
 
+import kobolds.the_elder.entities.EntityTemp;
+import kobolds.the_elder.init.ModEntities;
+import kobolds.the_elder.world.gen.ElderTreeGenerator;
 import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
@@ -12,15 +15,13 @@ import kobolds.the_elder.init.ModBlocks;
 
 public class BiomeGarden extends Biome {
 
-	// TODO: figure out what the parameters for this tree class actually need to be
-	//protected static final WorldGenAbstractTree TREE = new WorldGenElderTree(false, true);
+	protected static final ElderTreeGenerator TREE = new ElderTreeGenerator(false, true);
 	
 	public BiomeGarden() {
 		super(new BiomeProperties("Garden")
 				.setBaseHeight(0.125F)
 				.setHeightVariation(0.05F)
 				.setTemperature(0.8F)
-				.setRainfall(0.0F)
 				.setRainDisabled()
 				.setWaterColor(3138975));
 
@@ -36,13 +37,11 @@ public class BiomeGarden extends Biome {
 		this.spawnableWaterCreatureList.clear();
 
 		// TODO: change this entry to use our actual mobs - this is currently just a test
-		this.spawnableCreatureList.add(new SpawnListEntry(EntityEnderman.class, 10, 1, 5));
+		this.spawnableCreatureList.add(new SpawnListEntry(EntityTemp.class, 10, 1, 5));
 	}
 
-	/*
 	@Override
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
 		return TREE;
 	}
-	*/
 }

@@ -21,28 +21,33 @@ public class Elder
     public static final String VERSION = "0.0.3";
     public static final String MC_VERSION = "[1.12.2]";
 
+    @SidedProxy(clientSide = "kobolds.the_elder.proxy.ClientProxy", serverSide = "kobolds.the_elder.proxy.ServerProxy")
+    public static CommonProxy proxy;
+
+    @Mod.Instance
+    public static Elder instance;
+
     public static final CreativeTabs ELDER_TAB = new ElderTab();
 
     private static Logger logger = LogManager.getLogger(Elder.MODID);
-
-    @SidedProxy(clientSide = "kobolds.the_elder.proxy.ClientProxy", serverSide = "kobolds.the_elder.proxy.CommonProxy")
-    public static CommonProxy proxy;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
         EventSubscriber.preInitRegistries(event);
+        proxy.preInit(event);
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
         logger.info(Elder.NAME + "said hi!");
+        proxy.init(event);
     }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+        proxy.postInit(event);
     }
 
     @EventHandler
