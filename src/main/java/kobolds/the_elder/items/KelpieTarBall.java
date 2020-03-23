@@ -2,8 +2,8 @@ package kobolds.the_elder.items;
 
 import kobolds.the_elder.Elder;
 
+import kobolds.the_elder.entities.EntityKelpieTarBall;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemSnowball;
 import net.minecraft.item.ItemStack;
@@ -22,6 +22,7 @@ public class KelpieTarBall extends ItemSnowball {
         this.setCreativeTab(Elder.ELDER_TAB);
     }
 
+    // what happens when the player right-clicks this item in their inventory
     @Override
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
@@ -29,16 +30,15 @@ public class KelpieTarBall extends ItemSnowball {
             itemstack.shrink(1);
         }
 
-        worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+        worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SLIME_ATTACK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
         if (!worldIn.isRemote) {
-            EntitySnowball entitysnowball = new EntitySnowball(worldIn, playerIn);
-            entitysnowball.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
-            worldIn.spawnEntity(entitysnowball);
+            EntityKelpieTarBall tarBall = new EntityKelpieTarBall(worldIn, playerIn);
+            tarBall.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
+            worldIn.spawnEntity(tarBall);
         }
 
+        playerIn.getCooldownTracker().setCooldown(this, 15);
         playerIn.addStat(StatList.getObjectUseStats(this));
         return new ActionResult(EnumActionResult.SUCCESS, itemstack);
     }
-
-
 }

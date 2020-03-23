@@ -29,11 +29,12 @@ public class NightHindranceEvent {
     @SubscribeEvent
     public void elderNight(PlayerEvent event) {
         BlockPos pos = new BlockPos(event.player.getPositionVector());
+        PotionEffect potEff = new PotionEffect(MobEffects.MINING_FATIGUE, 500, 2);
 
         // at night (13000 is the same as /time set night), give the player certain effects to hinder the,
         if (!event.player.isCreative() && event.player.dimension == ModDimensions.getDimID()) {
             if (event.player.world.getBiome(pos) != ModBiomes.GARDEN && event.player.world.getWorldTime() > 13000) {
-                event.player.addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 500, 2));
+                event.player.addPotionEffect(potEff);
             }
         }
     }
