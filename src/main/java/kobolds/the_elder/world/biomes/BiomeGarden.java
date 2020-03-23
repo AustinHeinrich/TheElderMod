@@ -1,17 +1,12 @@
 package kobolds.the_elder.world.biomes;
 
 import kobolds.the_elder.entities.EntityTemp;
-import kobolds.the_elder.init.ModEntities;
 import kobolds.the_elder.world.gen.ElderTreeGenerator;
-import net.minecraft.entity.monster.EntityEnderman;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
-import net.minecraft.world.gen.feature.WorldGenBirchTree;
 
 import java.util.Random;
-
-import kobolds.the_elder.init.ModBlocks;
 
 public class BiomeGarden extends Biome {
 

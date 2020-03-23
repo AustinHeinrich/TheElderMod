@@ -3,6 +3,7 @@ package kobolds.the_elder.world.biomes;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeFar extends Biome {
+
 	public BiomeFar() {
         super(new BiomeProperties("Far")
         		.setBaseHeight(0.001F)

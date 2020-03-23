@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 
-public class DimensionInit {
+public class ModDimensions {
 
     // unique ID for the Elder
     private static int dimID = 2;

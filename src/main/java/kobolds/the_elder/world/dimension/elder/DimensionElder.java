@@ -1,14 +1,9 @@
 package kobolds.the_elder.world.dimension.elder;
 
-import kobolds.the_elder.init.DimensionInit;
-import kobolds.the_elder.init.ModBiomes;
-import kobolds.the_elder.world.dimension.elder.ChunkGeneratorElder;
+import kobolds.the_elder.init.ModDimensions;
 import net.minecraft.world.DimensionType;
 import net.minecraft.world.WorldProvider;
-import net.minecraft.world.biome.BiomeProviderSingle;
 import net.minecraft.world.gen.IChunkGenerator;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class DimensionElder extends WorldProvider {
 
@@ -20,7 +15,7 @@ public class DimensionElder extends WorldProvider {
 
     @Override
     public DimensionType getDimensionType() {
-        return DimensionInit.ELDER;
+        return ModDimensions.ELDER;
     }
 
     @Override
