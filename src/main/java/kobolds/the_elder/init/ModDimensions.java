@@ -10,18 +10,16 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
 
-public class DimensionInit {
+public class ModDimensions {
 
-    // unique ID for the Elder
-    private static int dimID = 2;
+    public static final DimensionType ELDER = DimensionType.register("Elder", "_elder", DimensionManager.getNextFreeDimId(), DimensionElder.class, false);
 
-    public static final DimensionType ELDER = DimensionType.register("Elder", "_elder", dimID, DimensionElder.class, false);
-
+    // dimension IDs stored in each respective dimension class
     public static void registerDimensions() {
-        DimensionManager.registerDimension(dimID, ELDER);
+        DimensionManager.registerDimension(ELDER.getId(), ELDER);
     }
 
     public static int getDimID() {
-        return dimID;
+        return ELDER.getId();
     }
 }

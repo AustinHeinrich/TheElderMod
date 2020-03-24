@@ -1,6 +1,5 @@
 package kobolds.the_elder.world.gen;
 
-import kobolds.the_elder.init.DimensionInit;
 import kobolds.the_elder.init.ModBiomes;
 import kobolds.the_elder.world.gen.generators.WorldGenStructure;
 

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "axis=x,variant=elder": {"model":  "eldermod:elder_wood"},
+    "axis=y,variant=elder": {"model":  "eldermod:elder_wood"},
+    "axis=z,variant=elder": {"model":  "eldermod:elder_wood"},
+    "axis=none,variant=elder": {"model":  "eldermod:elder_wood"}
+  }
+}
