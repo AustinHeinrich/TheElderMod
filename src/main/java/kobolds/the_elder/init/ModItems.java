@@ -1,7 +1,6 @@
 package kobolds.the_elder.init;
 
 import kobolds.the_elder.Elder;
-import kobolds.the_elder.items.KelpieTarBall;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
@@ -10,5 +9,5 @@ public class ModItems {
 
     public static final Item BOOK_OF_BEFORE = null;
     public static final Item ELDER_TELEPORTER = null;
-    public static final Item KELPIE_TAR_BALL = new KelpieTarBall();
+    public static final Item KELPIE_TAR_BALL = null;
 }

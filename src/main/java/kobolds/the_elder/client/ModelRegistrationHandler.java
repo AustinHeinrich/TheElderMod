@@ -26,7 +26,7 @@ public class ModelRegistrationHandler {
         registerModel(Item.getItemFromBlock(ModBlocks.ELDER_WOOD), 0);
         registerModel(Item.getItemFromBlock(ModBlocks.ELDER_WOOD_PLANKS), 0);
         registerModel(Item.getItemFromBlock(ModBlocks.ELDER_WOOD_STAIRS), 0);
-        registerModel(Item.getItemFromBlock(ModBlocks.KELPIE_TAR_TILE), 0);
+        registerModel(Item.getItemFromBlock(ModBlocks.KELPIE_TAR_LAYER), 0);
     }
 
     private static void registerModel(Item item, int meta) {

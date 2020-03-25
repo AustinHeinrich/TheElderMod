@@ -1,7 +1,7 @@
 {
   "variants": {
     "normal": {
-      "model": "eldermod:kelpie_tar_tile"
+      "model": "eldermod:kelpie_tar_layer"
     }
   }
 }

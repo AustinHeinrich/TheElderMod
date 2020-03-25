@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "eldermod:kelpie_tar_ball"
+    }
+  },
+  "result": {
+    "item": "eldermod:kelpie_tar_layer"
+  }
+}

@@ -18,11 +18,11 @@ import java.util.Random;
 
 // todo make sticky, make hard to break
 
-public class KelpieTarTile extends Block {
+public class KelpieTarLayer extends Block {
 
     protected static final AxisAlignedBB TAR_SIZE = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.0625D, 1.0D);
 
-    public KelpieTarTile() {
+    public KelpieTarLayer() {
         super(Material.CLAY);
         float hardness = 1.0f;
 
