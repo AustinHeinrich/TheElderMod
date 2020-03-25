@@ -30,7 +30,7 @@ public class NightHindranceEvent {
     @SubscribeEvent
     public void elderNight(TickEvent.PlayerTickEvent event) {
         BlockPos pos = new BlockPos(event.player.getPositionVector());
-        PotionEffect potEff = new PotionEffect(MobEffects.WITHER, 500, 1);
+        PotionEffect potEff = new PotionEffect(MobEffects.WITHER, 500, 2);
 
         // at night (13000 is the same as /time set night), give the player certain effects to hinder the,
         if (!event.player.isCreative() && event.player.dimension == ModDimensions.getDimID()) {
