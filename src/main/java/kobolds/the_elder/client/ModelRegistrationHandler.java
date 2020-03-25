@@ -18,6 +18,7 @@ public class ModelRegistrationHandler {
     public static void registerModels(ModelRegistryEvent event) {
         // items
         registerModel(ModItems.BOOK_OF_BEFORE, 0);
+        registerModel(ModItems.ELDER_TELEPORTER, 0);
 
         // blocks
         registerModel(Item.getItemFromBlock(ModBlocks.COLD_IRON_ORE), 0);
@@ -29,8 +30,8 @@ public class ModelRegistrationHandler {
     }
 
     private static void registerModel(Item item, int meta) {
-        ModelLoader.setCustomModelResourceLocation(item, meta,
-                new ModelResourceLocation(item.getRegistryName(), "inventory"));
+
+        ModelLoader.setCustomModelResourceLocation(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
     }
 
 }
