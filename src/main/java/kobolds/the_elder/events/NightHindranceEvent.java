@@ -10,6 +10,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 
 public class NightHindranceEvent {
@@ -27,9 +28,9 @@ public class NightHindranceEvent {
 
     // hinder the player at night in the Elder
     @SubscribeEvent
-    public void elderNight(PlayerEvent event) {
+    public void elderNight(TickEvent.PlayerTickEvent event) {
         BlockPos pos = new BlockPos(event.player.getPositionVector());
-        PotionEffect potEff = new PotionEffect(MobEffects.MINING_FATIGUE, 500, 2);
+        PotionEffect potEff = new PotionEffect(MobEffects.WITHER, 500, 1);
 
         // at night (13000 is the same as /time set night), give the player certain effects to hinder the,
         if (!event.player.isCreative() && event.player.dimension == ModDimensions.getDimID()) {

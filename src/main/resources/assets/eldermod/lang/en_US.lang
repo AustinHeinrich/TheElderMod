@@ -3,13 +3,14 @@ itemGroup.eldermod.eldermod=The Elder
 
 # Items
 item.eldermod.book_of_before.name=Book Of Before
-
-item.eldermod.elder_teleporter=Elder Dimension Teleport
+item.eldermod.elder_teleporter.name=Elder Dimension Teleport
+item.eldermod.kelie_tar_ball.name=Kelpie Tar Ball
 
 # Blocks
 tile.eldermod.cold_iron_ore.name=Cold Iron Ore
 tile.eldermod.elder_dirt.name=Elder Dirt
 tile.eldermod.elder_stone.name=Elder Stone
+tile.eldermod.kelpie_tar_tile.name=Kelpie Tar
 
 # Blocks / Wood
 tile.eldermod.elder_leaves.name=Elder Leaves

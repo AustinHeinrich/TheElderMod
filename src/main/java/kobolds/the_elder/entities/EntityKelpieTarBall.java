@@ -1,14 +1,10 @@
 package kobolds.the_elder.entities;
 
-import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.potion.PotionHelper;
-import net.minecraft.potion.PotionType;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
@@ -31,11 +27,10 @@ public class EntityKelpieTarBall extends EntityThrowable {
     @Override
     protected void onImpact(RayTraceResult result) {
         int dmg = 1;
-        PotionEffect potEff = new PotionEffect(MobEffects.SLOWNESS, 20, 1);
-
-        if ((result.entityHit != null)  && !(result.entityHit instanceof EntitySlime)) {
+        PotionEffect potEff = new PotionEffect(MobEffects.SLOWNESS, 100, 1);
+        if ((!world.isRemote && result.entityHit != null)  && !(result.entityHit instanceof EntitySlime)) {
             result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)dmg);
-            ((EntityLiving) result.entityHit).addPotionEffect(potEff);
+            ((EntityLivingBase) result.entityHit).addPotionEffect(potEff);
         }
     }
 }

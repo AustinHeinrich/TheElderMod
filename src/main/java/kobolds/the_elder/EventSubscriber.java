@@ -36,6 +36,7 @@ public class EventSubscriber {
                 RegistryUtil.setBlockName(new ElderWood(), "elder_wood"),
                 RegistryUtil.setBlockName(elder_wood_planks, "elder_wood_planks"),
                 RegistryUtil.setBlockName(new ElderWoodStairs(elder_wood_planks.getDefaultState()), "elder_wood_stairs"),
+                RegistryUtil.setBlockName(new KelpieTarTile(), "kelpie_tar_tile"),
         };
 
         event.getRegistry().registerAll(blocks);
@@ -58,6 +59,7 @@ public class EventSubscriber {
                 new ItemBlock(ModBlocks.ELDER_WOOD).setRegistryName(ModBlocks.ELDER_WOOD.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_WOOD_PLANKS).setRegistryName(ModBlocks.ELDER_WOOD_PLANKS.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_WOOD_STAIRS).setRegistryName(ModBlocks.ELDER_WOOD_STAIRS.getRegistryName()),
+                new ItemBlock(ModBlocks.KELPIE_TAR_TILE).setRegistryName(ModBlocks.KELPIE_TAR_TILE.getRegistryName()),
         };
 
         event.getRegistry().registerAll(items);

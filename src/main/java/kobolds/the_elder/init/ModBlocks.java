@@ -1,5 +1,6 @@
 package kobolds.the_elder.init;
 
+import kobolds.the_elder.items.KelpieTarBall;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 
 import kobolds.the_elder.Elder;
@@ -17,4 +18,5 @@ public class ModBlocks  {
     public static final ElderWood ELDER_WOOD = null;
     public static final ElderWoodPlanks ELDER_WOOD_PLANKS = null;
     public static final ElderWoodStairs ELDER_WOOD_STAIRS = null;
+    public static final KelpieTarTile KELPIE_TAR_TILE = new KelpieTarTile();
 }
