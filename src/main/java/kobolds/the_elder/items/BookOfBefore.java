@@ -1,5 +1,6 @@
 package kobolds.the_elder.items;
 
+import kobolds.the_elder.items.base.ItemBase;
 import net.minecraft.item.Item;
 
 import kobolds.the_elder.Elder;
@@ -9,11 +10,11 @@ import kobolds.the_elder.Elder;
 
   TODO make this book -- need a gui handler, I think?
  */
-public class BookOfBefore extends Item {
+public class BookOfBefore extends ItemBase {
     // aka the Elder aka the Land Before Time feat. Littlefoot's mom
 
-    public BookOfBefore() {
-        super();
-        setCreativeTab(Elder.ELDER_TAB);
+    public BookOfBefore(String name) {
+        super(name);
+        this.setCreativeTab(Elder.ELDER_TAB);
     }
 }
