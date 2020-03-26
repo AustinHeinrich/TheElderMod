@@ -11,31 +11,24 @@ import net.minecraft.entity.monster.EntityPigZombie;
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
-import net.minecraft.network.datasync.DataParameter;
-import net.minecraft.network.datasync.DataSerializers;
-import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 
-public class EntityTemp extends EntityMob {
-    private static final DataParameter<Boolean> ARMS_RAISED = EntityDataManager.createKey(EntityTemp.class, DataSerializers.BOOLEAN);
+public class EntityWorm extends EntityMob {
 
     public static final ResourceLocation LOOT = new ResourceLocation(Elder.MODID, "entities/temp");
 
-    public EntityTemp(World worldIn) {
+    public EntityWorm(World worldIn) {
         super(worldIn);
-        setSize(0.6f, 1.95f);
+        this.setSize(2.4F, 1.8F);
     }
 
     @Override
     protected void entityInit() {
         super.entityInit();
-        this.getDataManager().register(ARMS_RAISED, Boolean.valueOf(false));
     }
 
     @Override
@@ -48,21 +41,12 @@ public class EntityTemp extends EntityMob {
         this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0d);
     }
 
-    public void setArmsRaised(boolean armsRaised) {
-        this.getDataManager().set(ARMS_RAISED, Boolean.valueOf(armsRaised));
-    }
-
-    @SideOnly(Side.CLIENT)
-    public boolean isArmsRaised() {
-        return this.getDataManager().get(ARMS_RAISED).booleanValue();
-    }
-
     @Override
     protected void initEntityAI() {
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAITempAttack(this, 1.0d, false));
-        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0d));
-        this.tasks.addTask(7, new EntityAIWander(this, 1.0d));
+        this.tasks.addTask(2, new EntityAIWormAttack(this, 2.0d, false));
+        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 2.0d));
+        this.tasks.addTask(7, new EntityAIWander(this, 2.0d));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0f));
         this.tasks.addTask(8, new EntityAILookIdle(this));
         this.applyEntityAI();
@@ -80,8 +64,7 @@ public class EntityTemp extends EntityMob {
     public boolean attackEntityAsMob(Entity entityIn) {
         if (super.attackEntityAsMob(entityIn)) {
             if (entityIn instanceof EntityLivingBase) {
-                ((EntityLivingBase)entityIn).addPotionEffect(new PotionEffect(MobEffects.HEALTH_BOOST, 200));
-                ((EntityLivingBase)entityIn).addPotionEffect(new PotionEffect(MobEffects.REGENERATION, 200));
+                ((EntityLivingBase)entityIn).addPotionEffect(new PotionEffect(MobEffects.MINING_FATIGUE, 200));
             }
             return true;
         }
