@@ -1,17 +1,18 @@
-# Tabs
+## Tabs
 itemGroup.eldermod.eldermod=The Elder
 
-# Items
+## Items
 item.eldermod.book_of_before.name=Book Of Before
+item.eldermod.elder_teleporter.name=Elder Dimension Teleport
+item.eldermod.kelpie_tar_ball.name=Kelpie Tar Ball
 
-item.eldermod.elder_teleporter=Elder Dimension Teleport
-
-# Blocks
+## Blocks
 tile.eldermod.cold_iron_ore.name=Cold Iron Ore
 tile.eldermod.elder_dirt.name=Elder Dirt
 tile.eldermod.elder_stone.name=Elder Stone
+tile.eldermod.kelpie_tar_layer.name=Kelpie Tar
 
-# Blocks / Wood
+## Blocks / Wood
 tile.eldermod.elder_leaves.name=Elder Leaves
 tile.eldermod.elder_wood_planks.name=Elder Wood Planks
 tile.eldermod.elder_sapling.name=Elder Spapling

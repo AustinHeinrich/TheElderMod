@@ -1,13 +1,12 @@
 package kobolds.the_elder.init;
 
-import kobolds.the_elder.events.NightHindranceEventHandler;
+import kobolds.the_elder.events.NightHindranceEvent;
 import net.minecraftforge.common.MinecraftForge;
 
-public class EventInit {
+public class ModEvents {
 
     public static void registerEvents() {
-        NightHindranceEventHandler nightEvent = new NightHindranceEventHandler();
+        NightHindranceEvent nightEvent = new NightHindranceEvent();
         MinecraftForge.EVENT_BUS.register(nightEvent);
     }
-
 }

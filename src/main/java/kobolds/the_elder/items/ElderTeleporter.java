@@ -23,7 +23,7 @@ import net.minecraft.world.World;
 public class ElderTeleporter extends Item {
 	public ElderTeleporter() {
 		super();
-		setCreativeTab(Elder.ELDER_TAB);
+		this.setCreativeTab(Elder.ELDER_TAB);
 	}
 	
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {

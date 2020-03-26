@@ -403,7 +403,7 @@ public class ChunkGeneratorElder implements IChunkGenerator {
 				}
 			}
 		}
-	}	
+	}
 	private void setUnderside(int x, int z, ChunkPrimer primer) {
 		this.generateUnderside(x * 4, 0, z * 4);
 
