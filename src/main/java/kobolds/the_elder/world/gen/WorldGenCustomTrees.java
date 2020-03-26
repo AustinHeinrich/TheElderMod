@@ -42,7 +42,6 @@ public class WorldGenCustomTrees
                 chancesToSpawn = 0;
         }
 
-        // TODO change biomes from 'classes' to 'Biomes' -- unnecessary to generate a list of biomes as classes
         ArrayList<Biome> biomesList = new ArrayList<Biome>(Arrays.asList(biomes));
         int heightDiff = maxHeight - minHeight + 1;
         for (int i=0; i<chancesToSpawn; i++)
