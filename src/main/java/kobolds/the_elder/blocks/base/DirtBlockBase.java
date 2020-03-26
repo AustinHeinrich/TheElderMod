@@ -1,5 +1,6 @@
 package kobolds.the_elder.blocks.base;
 
+import javafx.scene.paint.Material;
 import kobolds.the_elder.Elder;
 import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.init.ModItems;

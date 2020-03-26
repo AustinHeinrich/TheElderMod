@@ -1,7 +1,18 @@
 {
-  "parent": "block/cube_column",
-  "textures": {
-    "end": "eldermod:blocks/log_elder_top",
-    "side": "eldermod:blocks/log_elder"
+  "forge_marker": 1,
+  "defaults": {
+    "model": "cube_column",
+    "textures": {
+      "side": "eldermod:blocks/elder_wood",
+      "end": "eldermod:blocks/elder_wood_top"
+    }
+  },
+  "variants": {
+    "axis": {
+      "y": {},
+      "z": { "x": 90 },
+      "x": { "x": 90, "y": 90 },
+      "none": { "model": "cube_all", "textures": { "all": "#side" } }
+    }
   }
 }

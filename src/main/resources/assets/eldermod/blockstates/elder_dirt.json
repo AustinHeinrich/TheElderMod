@@ -2,9 +2,5 @@
   "forge_marker": 1,
   "defaults": {
     "model": "eldermod:elder_dirt"
-  },
-  "variants": {
-    "normal": [{}],
-    "inventory": [{}]
   }
 }

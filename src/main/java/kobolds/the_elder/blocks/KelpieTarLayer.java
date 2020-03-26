@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-// todo make sticky, make hard to break
+// TODO fix neighbour transparency
 
 public class KelpieTarLayer extends BlockBase {
 
