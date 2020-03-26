@@ -4,6 +4,7 @@ import kobolds.the_elder.Elder;
 import kobolds.the_elder.commands.util.Teleport;
 import kobolds.the_elder.init.ModDimensions;
 import kobolds.the_elder.init.ModWorldGen;
+import kobolds.the_elder.items.base.ItemBase;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -20,9 +21,9 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
-public class ElderTeleporter extends Item {
-	public ElderTeleporter() {
-		super();
+public class ElderTeleporter extends ItemBase {
+	public ElderTeleporter(String name) {
+		super(name);
 		this.setCreativeTab(Elder.ELDER_TAB);
 	}
 	
