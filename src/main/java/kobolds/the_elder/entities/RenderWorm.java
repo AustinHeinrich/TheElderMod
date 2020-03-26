@@ -2,7 +2,6 @@ package kobolds.the_elder.entities;
 
 import kobolds.the_elder.Elder;
 import net.minecraft.client.model.ModelSilverfish;
-import net.minecraft.client.model.ModelZombie;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
