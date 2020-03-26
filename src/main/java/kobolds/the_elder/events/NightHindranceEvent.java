@@ -29,12 +29,13 @@ public class NightHindranceEvent {
     // hinder the player at night in the Elder
     @SubscribeEvent
     public void elderNight(TickEvent.PlayerTickEvent event) {
+        int nightTick = 13000; // same as "/time set night"
         BlockPos pos = new BlockPos(event.player.getPositionVector());
         PotionEffect potEff = new PotionEffect(MobEffects.WITHER, 500, 2);
 
-        // at night (13000 is the same as /time set night), give the player certain effects to hinder the,
+        // at night, give the player certain effects to hinder them
         if (!event.player.isCreative() && event.player.dimension == ModDimensions.getDimID()) {
-            if (event.player.world.getBiome(pos) != ModBiomes.GARDEN && event.player.world.getWorldTime() > 13000) {
+            if (event.player.world.getBiome(pos) != ModBiomes.GARDEN && event.player.world.getWorldTime() > nightTick) {
                 event.player.addPotionEffect(potEff);
             }
         }

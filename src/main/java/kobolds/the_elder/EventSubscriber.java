@@ -17,7 +17,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import kobolds.the_elder.blocks.ElderWood;
 import kobolds.the_elder.items.BookOfBefore;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber(modid = Elder.MODID)
 public class EventSubscriber {
@@ -38,7 +37,7 @@ public class EventSubscriber {
                 RegistryUtil.setBlockName(elder_wood_planks, "elder_wood_planks"),
                 RegistryUtil.setBlockName(new ElderWoodStairs(elder_wood_planks.getDefaultState()), "elder_wood_stairs"),
                 RegistryUtil.setBlockName(new KelpieTarLayer(), "kelpie_tar_layer"),
-                RegistryUtil.setBlockName(new PactmakerVital(), "pactmaker_vital"),
+                RegistryUtil.setBlockName(new PactmakerNightSafety(), "pactmaker_vital"),
         };
 
         event.getRegistry().registerAll(blocks);
