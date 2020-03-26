@@ -18,5 +18,5 @@ public class ModBlocks  {
     public static final ElderWoodPlanks ELDER_WOOD_PLANKS = null;
     public static final ElderWoodStairs ELDER_WOOD_STAIRS = null;
     public static final KelpieTarLayer KELPIE_TAR_LAYER = new KelpieTarLayer();
-    public static final PactmakerNightSafety PACTMAKER_VITAL = new PactmakerNightSafety();
+    public static final PactmakerNightSafety PACTMAKER_NIGHT_SAFETY = new PactmakerNightSafety();
 }

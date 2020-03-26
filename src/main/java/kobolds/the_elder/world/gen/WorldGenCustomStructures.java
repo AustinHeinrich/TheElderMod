@@ -48,7 +48,7 @@ public class WorldGenCustomStructures implements IWorldGenerator {
         generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
         generateStructure(OLD_WAYTOWER_VARIANT, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
         // chance = 220
-        generateStructure(NIGHT_SAFETY, world, random, chunkX, chunkZ, 220, Blocks.GRASS, ModBiomes.BEYOND);
+        generateStructure(NIGHT_SAFETY, world, random, chunkX, chunkZ, 220, Blocks.GRASS, ModBiomes.GARDEN);
     }
 
     // generator -- the World Generator object to spawn in, usually a WorldGenStructure object

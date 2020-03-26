@@ -37,7 +37,7 @@ public class EventSubscriber {
                 RegistryUtil.setBlockName(elder_wood_planks, "elder_wood_planks"),
                 RegistryUtil.setBlockName(new ElderWoodStairs(elder_wood_planks.getDefaultState()), "elder_wood_stairs"),
                 RegistryUtil.setBlockName(new KelpieTarLayer(), "kelpie_tar_layer"),
-                RegistryUtil.setBlockName(new PactmakerNightSafety(), "pactmaker_vital"),
+                RegistryUtil.setBlockName(new PactmakerNightSafety(), "pactmaker_night_safety"),
         };
 
         event.getRegistry().registerAll(blocks);
@@ -61,7 +61,7 @@ public class EventSubscriber {
                 new ItemBlock(ModBlocks.ELDER_WOOD_PLANKS).setRegistryName(ModBlocks.ELDER_WOOD_PLANKS.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_WOOD_STAIRS).setRegistryName(ModBlocks.ELDER_WOOD_STAIRS.getRegistryName()),
                 new ItemBlock(ModBlocks.KELPIE_TAR_LAYER).setRegistryName(ModBlocks.KELPIE_TAR_LAYER.getRegistryName()),
-                new ItemBlock(ModBlocks.PACTMAKER_VITAL).setRegistryName(ModBlocks.PACTMAKER_VITAL.getRegistryName()),
+                new ItemBlock(ModBlocks.PACTMAKER_NIGHT_SAFETY).setRegistryName(ModBlocks.PACTMAKER_NIGHT_SAFETY.getRegistryName()),
         };
 
         event.getRegistry().registerAll(items);
@@ -72,6 +72,7 @@ public class EventSubscriber {
         ModBiomes.registerBiomes();
         ModDimensions.registerDimensions();
         ModWorldGen.registerCustomStructures();
+        ModPotions.registerPotions();
 
         ModEvents.registerEvents();
     }
