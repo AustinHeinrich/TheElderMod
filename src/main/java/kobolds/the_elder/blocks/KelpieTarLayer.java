@@ -27,6 +27,7 @@ public class KelpieTarLayer extends BlockBase {
         super(name, material);
         float hardness = 1.0f;
 
+        // properties
         this.setHardness(hardness);
         this.setTickRandomly(true);
         this.setSoundType(SoundType.SLIME);
@@ -52,11 +53,12 @@ public class KelpieTarLayer extends BlockBase {
         return false;
     }
 
+    /*
     // allows travel over tile
     @Override
     public boolean isFullCube(IBlockState state) {
         return false;
-    }
+    } */
 
     // drop a tar ball, not the tile
     @Override

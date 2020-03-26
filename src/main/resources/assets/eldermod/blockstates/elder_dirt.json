@@ -1,6 +1,10 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "eldermod:elder_dirt"
+  "variants": {
+    "normal": [
+      { "model": "eldermod:elder_dirt" },
+      { "model": "eldermod:elder_dirt", ",y": 90 },
+      { "model": "eldermod:elder_dirt", "y": 180 },
+      { "model": "eldermod:elder_dirt", "y": 270 }
+    ]
   }
 }

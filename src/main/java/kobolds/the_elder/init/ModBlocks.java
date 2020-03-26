@@ -16,7 +16,7 @@ public class ModBlocks  {
 
     // alphanumeric ordering
     public static final Block COLD_IRON_ORE = new OreBlockBase("cold_iron_ore");
-    public static final Block ELDER_DIRT = new DirtBlockBase("elder_dirt");
+    public static final Block ELDER_DIRT = new DirtBlockBase("elder_dirt", Material.GROUND);
     public static final Block ELDER_LEAVES = new LeavesBlockBase("elder_leaves");
     public static final Block ELDER_SAPLING = new SaplingBlockBase("elder_sapling");
     public static final Block ELDER_STONE = new ElderStone("elder_stone", Material.ROCK);

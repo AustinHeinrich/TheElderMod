@@ -24,3 +24,4 @@ gradle.properties
 eclipse
 run
 *.bat
+forge-1.12.2*
