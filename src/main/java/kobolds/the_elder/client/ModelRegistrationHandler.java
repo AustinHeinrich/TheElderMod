@@ -1,5 +1,6 @@
 package kobolds.the_elder.client;
 
+import jdk.nashorn.internal.ir.Block;
 import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.init.ModItems;
 import net.minecraft.block.Block;
@@ -10,6 +11,7 @@ import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
