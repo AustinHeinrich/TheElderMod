@@ -1,6 +1,7 @@
 package kobolds.the_elder.blocks;
 
 import kobolds.the_elder.Elder;
+import kobolds.the_elder.blocks.base.BlockBase;
 import kobolds.the_elder.init.ModPotions;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -23,10 +24,10 @@ import java.util.Random;
  * Most common pactmaker, found in the Night Safety Station structure
  */
 
-public class PactmakerNightSafety extends Block {
+public class PactmakerNightSafety extends BlockBase {
 
-    public PactmakerNightSafety() {
-        super(Material.REDSTONE_LIGHT);
+    public PactmakerNightSafety(String name, Material material) {
+        super(name, material);
         float hardness = 50f;
         float lightLevel = 0.5f;
 

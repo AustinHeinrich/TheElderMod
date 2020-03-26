@@ -3,6 +3,7 @@ package kobolds.the_elder.items;
 import kobolds.the_elder.Elder;
 
 import kobolds.the_elder.entities.EntityKelpieTarBall;
+import kobolds.the_elder.items.base.ItemThrownBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.ItemSnowball;
@@ -18,9 +19,10 @@ import net.minecraft.world.World;
 
 // item dropped by Kelpies, when thrown deals 1 damage, slowness effect
 // 4 in a square makes a kelpie tar tile
-public class KelpieTarBall extends ItemSnowball {
+public class KelpieTarBall extends ItemThrownBase {
 
-    public KelpieTarBall() {
+    public KelpieTarBall(String name) {
+        super(name);
         this.setCreativeTab(Elder.ELDER_TAB);
     }
 

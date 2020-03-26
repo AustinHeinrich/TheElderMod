@@ -1,6 +1,7 @@
 package kobolds.the_elder.blocks;
 
 import kobolds.the_elder.Elder;
+import kobolds.the_elder.blocks.base.BlockBase;
 import kobolds.the_elder.init.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -18,12 +19,12 @@ import java.util.Random;
 
 // todo make sticky, make hard to break
 
-public class KelpieTarLayer extends Block {
+public class KelpieTarLayer extends BlockBase {
 
     protected static final AxisAlignedBB TAR_SIZE = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.0625D, 1.0D);
 
-    public KelpieTarLayer() {
-        super(Material.CLAY);
+    public KelpieTarLayer(String name, Material material) {
+        super(name, material);
         float hardness = 1.0f;
 
         this.setHardness(hardness);

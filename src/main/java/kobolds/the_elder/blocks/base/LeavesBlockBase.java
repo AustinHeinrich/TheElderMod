@@ -1,7 +1,9 @@
-package kobolds.the_elder.blocks;
+package kobolds.the_elder.blocks.base;
 
 import kobolds.the_elder.Elder;
 import kobolds.the_elder.init.ModBlocks;
+import kobolds.the_elder.init.ModItems;
+import kobolds.the_elder.util.interfaces.IHasModel;
 import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.BlockPlanks;
 import net.minecraft.block.properties.IProperty;
@@ -11,6 +13,7 @@ import net.minecraft.client.renderer.block.model.ModelBlock;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
@@ -21,11 +24,21 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-public class ElderLeaves extends BlockLeaves {
+public class LeavesBlockBase extends BlockLeaves implements IHasModel {
 
-    public ElderLeaves() {
+    public LeavesBlockBase(String name)  {
         super();
+        setRegistryName(name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
+
+        ModBlocks.BLOCKS.add(this);
+        ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+    }
+
+    @Override
+    public void registerModels() {
+        Elder.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 
     // used the following tutorial: http://jabelarminecraft.blogspot.com/p/minecraft-modding-custom-leaves.html
