@@ -3,6 +3,7 @@ package kobolds.the_elder.world.biomes;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeBeyond extends Biome {
+
 	public BiomeBeyond() {
         super(new BiomeProperties("Beyond")
         		.setBaseHeight(-5F)
@@ -11,5 +12,4 @@ public class BiomeBeyond extends Biome {
         		.setRainDisabled()
         		);
 	}
-
 }

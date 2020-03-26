@@ -4,6 +4,7 @@ import kobolds.the_elder.blocks.*;
 import kobolds.the_elder.commands.CommandDimensionTeleport;
 import kobolds.the_elder.init.*;
 import kobolds.the_elder.items.ElderTeleporter;
+import kobolds.the_elder.items.KelpieTarBall;
 import kobolds.the_elder.util.RegistryUtil;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
@@ -37,6 +38,8 @@ public class EventSubscriber {
                 RegistryUtil.setBlockName(new ElderWood(), "elder_wood"),
                 RegistryUtil.setBlockName(elder_wood_planks, "elder_wood_planks"),
                 RegistryUtil.setBlockName(new ElderWoodStairs(elder_wood_planks.getDefaultState()), "elder_wood_stairs"),
+                RegistryUtil.setBlockName(new KelpieTarLayer(), "kelpie_tar_layer"),
+                RegistryUtil.setBlockName(new PactmakerNightSafety(), "pactmaker_night_safety"),
         };
 
         event.getRegistry().registerAll(blocks);
@@ -45,8 +48,9 @@ public class EventSubscriber {
     @SubscribeEvent
     public static void registerItems(Register<Item> event) {
         final Item[] items = {
-                RegistryUtil.setItemName(new BookOfBefore(), "book_of_before").setCreativeTab(CreativeTabs.MISC),
-                RegistryUtil.setItemName(new ElderTeleporter(), "elder_teleporter").setCreativeTab(CreativeTabs.MISC),
+                RegistryUtil.setItemName(new BookOfBefore(), "book_of_before").setCreativeTab(Elder.ELDER_TAB),
+                RegistryUtil.setItemName(new ElderTeleporter(), "elder_teleporter").setCreativeTab(Elder.ELDER_TAB),
+                RegistryUtil.setItemName(new KelpieTarBall(), "kelpie_tar_ball").setCreativeTab(Elder.ELDER_TAB),
         };
 
         final Item[] itemBlocks = {
@@ -58,7 +62,8 @@ public class EventSubscriber {
                 new ItemBlock(ModBlocks.ELDER_WOOD).setRegistryName(ModBlocks.ELDER_WOOD.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_WOOD_PLANKS).setRegistryName(ModBlocks.ELDER_WOOD_PLANKS.getRegistryName()),
                 new ItemBlock(ModBlocks.ELDER_WOOD_STAIRS).setRegistryName(ModBlocks.ELDER_WOOD_STAIRS.getRegistryName()),
-
+                new ItemBlock(ModBlocks.KELPIE_TAR_LAYER).setRegistryName(ModBlocks.KELPIE_TAR_LAYER.getRegistryName()),
+                new ItemBlock(ModBlocks.PACTMAKER_NIGHT_SAFETY).setRegistryName(ModBlocks.PACTMAKER_NIGHT_SAFETY.getRegistryName()),
         };
 
         event.getRegistry().registerAll(items);
@@ -69,8 +74,9 @@ public class EventSubscriber {
         ModBiomes.registerBiomes();
         ModDimensions.registerDimensions();
         ModWorldGen.registerCustomStructures();
+        ModPotions.registerPotions();
 
-        EventInit.registerEvents();
+        ModEvents.registerEvents();
     }
 
     public static void serverRegistries(FMLServerStartingEvent event) {

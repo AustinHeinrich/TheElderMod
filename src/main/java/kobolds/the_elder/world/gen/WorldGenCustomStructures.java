@@ -25,7 +25,7 @@ public class WorldGenCustomStructures implements IWorldGenerator {
     public static final WorldGenStructure OLD_WAYTOWER_VARIANT = new WorldGenStructure("old_waytower_variant");
 
     // pactmakers
-    public static final WorldGenStructure VITALITY_TRADER = new WorldGenStructure("vitality_trading_station");
+    public static final WorldGenStructure NIGHT_SAFETY = new WorldGenStructure("night_safety_station");
 
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         switch(world.provider.getDimension()) {
@@ -48,7 +48,7 @@ public class WorldGenCustomStructures implements IWorldGenerator {
         generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
         generateStructure(OLD_WAYTOWER_VARIANT, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
         // chance = 220
-        generateStructure(VITALITY_TRADER, world, random, chunkX, chunkZ, 220, Blocks.GRASS, ModBiomes.GARDEN);
+        generateStructure(NIGHT_SAFETY, world, random, chunkX, chunkZ, 220, Blocks.GRASS, ModBiomes.GARDEN);
     }
 
     // generator -- the World Generator object to spawn in, usually a WorldGenStructure object

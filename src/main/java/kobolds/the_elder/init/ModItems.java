@@ -9,4 +9,5 @@ public class ModItems {
 
     public static final Item BOOK_OF_BEFORE = null;
     public static final Item ELDER_TELEPORTER = null;
+    public static final Item KELPIE_TAR_BALL = null;
 }
