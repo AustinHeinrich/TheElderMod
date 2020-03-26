@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "eldermod:blocks/elder_planks"
+    "all": "eldermod:blocks/elder_wood_planks"
   }
 }

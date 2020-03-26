@@ -6,6 +6,7 @@ import kobolds.the_elder.Elder;
 import kobolds.the_elder.enums.WoodVariant;
 import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.init.ModItems;
+import kobolds.the_elder.util.interfaces.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.SoundType;
@@ -16,6 +17,7 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
@@ -24,7 +26,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class WoodBlockBase extends BlockLog {
+public class WoodBlockBase extends BlockLog implements IHasModel {
 
     public static final IProperty<WoodVariant> VARIANT = PropertyEnum.create("variant", WoodVariant.class);
 
@@ -114,7 +116,9 @@ public class WoodBlockBase extends BlockLog {
     }
 
     // TODO: may want to create a registerModel() function - reference TForest
-
+    public void registerModels() {
+        Elder.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+    }
 
     @Override
     public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
@@ -125,4 +129,6 @@ public class WoodBlockBase extends BlockLog {
     public int getFireSpreadSpeed(IBlockAccess world, BlockPos pos, EnumFacing face) {
         return 5;
     }
+
+
 }
