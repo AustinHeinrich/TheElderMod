@@ -33,16 +33,12 @@ public class EventSubscriber {
     @SubscribeEvent
     public static void registerBlocks(Register<Block> event) {
         // register each block entry
-        for (Block block : ModBlocks.BLOCKS) {
-            event.getRegistry().register(block);
-        }
+        event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
     }
 
     @SubscribeEvent
     public static void registerItems(Register<Item> event) {
-        for (Item item : ModItems.ITEMS) {
-            event.getRegistry().register(item);
-        }
+        event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
     }
 
     @SubscribeEvent

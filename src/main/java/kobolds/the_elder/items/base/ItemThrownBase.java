@@ -8,8 +8,8 @@ import net.minecraft.item.ItemSnowball;
 public abstract class ItemThrownBase extends ItemSnowball implements IHasModel {
 
     public ItemThrownBase(String name) {
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        setRegistryName(Elder.MODID, name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
 
         ModItems.ITEMS.add(this);

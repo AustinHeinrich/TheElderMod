@@ -10,8 +10,8 @@ import net.minecraft.item.ItemBlock;
 public class OreBlockBase extends BlockOre {
 
     public OreBlockBase(String name) {
-        setUnlocalizedName(name);
         setRegistryName(name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
         setSoundType(SoundType.STONE);
 

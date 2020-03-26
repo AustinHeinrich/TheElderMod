@@ -38,8 +38,8 @@ public class WoodBlockBase extends BlockLog {
         setDefaultState(this.getDefaultState().withProperty(LOG_AXIS, EnumAxis.Y));
 
         // registration
-        setUnlocalizedName(name);
         setRegistryName(name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
         ModBlocks.BLOCKS.add(this);
         ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));

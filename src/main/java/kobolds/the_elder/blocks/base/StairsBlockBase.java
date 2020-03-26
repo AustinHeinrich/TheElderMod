@@ -15,8 +15,8 @@ public class StairsBlockBase extends BlockStairs {
 
         this.useNeighborBrightness = true;
 
-        setUnlocalizedName(name);
         setRegistryName(name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
 
         ModBlocks.BLOCKS.add(this);

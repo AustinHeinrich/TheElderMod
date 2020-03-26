@@ -12,8 +12,8 @@ import net.minecraft.item.ItemBlock;
 public class BlockBase extends Block implements IHasModel {
     public BlockBase(String name, Material material) {
         super(material);
-        setUnlocalizedName(name);
         setRegistryName(name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
 
         ModBlocks.BLOCKS.add(this);

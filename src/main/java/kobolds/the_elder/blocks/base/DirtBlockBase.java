@@ -17,8 +17,9 @@ public class DirtBlockBase extends BlockDirt implements IHasModel {
 	
 	public DirtBlockBase(String name) {
 		super();
-		setUnlocalizedName(name);
 		setRegistryName(name);
+		setUnlocalizedName(Elder.MODID + "." + name);
+
 		setCreativeTab(Elder.ELDER_TAB);
 
 		ModBlocks.BLOCKS.add(this);

@@ -12,8 +12,8 @@ public class SaplingBlockBase extends BlockSapling implements IHasModel {
 
     public SaplingBlockBase(String name) {
         super();
-        setUnlocalizedName(name);
         setRegistryName(name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
 
         ModBlocks.BLOCKS.add(this);

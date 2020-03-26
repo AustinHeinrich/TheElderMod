@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import java.util.ArrayList;
 import java.util.List;
 
-@ObjectHolder(Elder.MODID)
+//@ObjectHolder(Elder.MODID)
 public class ModItems {
 
     public static final List<Item> ITEMS = new ArrayList<>();

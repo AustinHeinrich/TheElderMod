@@ -28,8 +28,8 @@ public class LeavesBlockBase extends BlockLeaves implements IHasModel {
 
     public LeavesBlockBase(String name)  {
         super();
-        setUnlocalizedName(name);
         setRegistryName(name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
 
         ModBlocks.BLOCKS.add(this);

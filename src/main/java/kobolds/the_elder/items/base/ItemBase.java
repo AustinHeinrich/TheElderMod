@@ -11,8 +11,8 @@ import net.minecraft.item.ItemBlock;
 public class ItemBase extends Item implements IHasModel {
 
     public ItemBase(String name) {
-        setUnlocalizedName(name);
-        setRegistryName(name);
+        setRegistryName(Elder.MODID, name);
+        setUnlocalizedName(Elder.MODID + "." + name);
         setCreativeTab(Elder.ELDER_TAB);
 
         ModItems.ITEMS.add(this);
