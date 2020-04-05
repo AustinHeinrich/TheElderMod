@@ -1,7 +1,8 @@
 {
+  "forge_marker": 1,
   "variants": {
     "normal": {
-      "model": "eldermod:blocks/elder_wood_planks"
+      "model": "eldermod:elder_wood_planks"
     }
   }
 }

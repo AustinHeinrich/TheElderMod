@@ -1,10 +1,7 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "model": "eldermod:cold_iron_ore"
-  },
   "variants": {
-    "normal": [{}],
-    "inventory": [{}]
+    "normal": {
+      "model": "eldermod:cold_iron_ore"
+    }
   }
 }

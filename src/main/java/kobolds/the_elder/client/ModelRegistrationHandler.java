@@ -1,6 +1,5 @@
 package kobolds.the_elder.client;
 
-import jdk.nashorn.internal.ir.Block;
 import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.init.ModItems;
 import net.minecraft.block.Block;
@@ -11,11 +10,6 @@ import net.minecraft.client.renderer.block.statemap.IStateMapper;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import kobolds.the_elder.Elder;
 
 import java.util.Map;
 
@@ -38,12 +32,9 @@ public class ModelRegistrationHandler {
         // items
         registerItemModel(ModItems.BOOK_OF_BEFORE, 0);
         registerItemModel(ModItems.ELDER_TELEPORTER, 0);
-
-
     }
 
     private static void registerBlock(Block block, IStateMapper stateMapper) {
-
         Map<IBlockState, ModelResourceLocation> stateMRLMap = stateMapper.putStateModelLocations(block);
 
         // itemblock
