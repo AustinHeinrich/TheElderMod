@@ -11,7 +11,7 @@ import kobolds.the_elder.Elder;
   TODO make this book -- need a gui handler, I think?
  */
 public class BookOfBefore extends ItemBase {
-    // aka the Elder aka the Land Before Time feat. Littlefoot's mom
+    // the Elder Scroll!
 
     public BookOfBefore(String name) {
         super(name);

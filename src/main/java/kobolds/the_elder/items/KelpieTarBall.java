@@ -15,10 +15,8 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
-// TODO change the color of the thrown tar ball
+// TODO add a texture to the thrown ball
 
-// item dropped by Kelpies, when thrown deals 1 damage, slowness effect
-// 4 in a square makes a kelpie tar tile
 public class KelpieTarBall extends ItemThrownBase {
 
     public KelpieTarBall(String name) {
