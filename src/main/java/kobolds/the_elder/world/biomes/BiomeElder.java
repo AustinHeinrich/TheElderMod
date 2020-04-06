@@ -1,8 +1,6 @@
 package kobolds.the_elder.world.biomes;
 
-import net.minecraft.world.biome.Biome;
-
-public class BiomeElder extends Biome {
+public class BiomeElder extends ElderBiomeBase {
 
     public BiomeElder() {
         super(new BiomeProperties("Elder")
@@ -10,6 +8,7 @@ public class BiomeElder extends Biome {
         		.setHeightVariation(1.2F)
         		.setTemperature(0.6F)
         		.setRainDisabled()
-        		.setWaterColor(12345678));
+        		.setWaterColor(12345678)
+        		);
     }
 }
