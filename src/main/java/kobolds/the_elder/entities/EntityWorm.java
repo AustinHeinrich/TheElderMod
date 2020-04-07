@@ -1,6 +1,7 @@
 package kobolds.the_elder.entities;
 
 import kobolds.the_elder.Elder;
+import kobolds.the_elder.entities.ai.EntityAIWormAttack;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -19,7 +20,7 @@ import javax.annotation.Nullable;
 
 public class EntityWorm extends EntityMob {
 
-    public static final ResourceLocation LOOT = new ResourceLocation(Elder.MODID, "entities/temp");
+    public static final ResourceLocation LOOT = new ResourceLocation(Elder.MODID, "entities/worm");
 
     public EntityWorm(World worldIn) {
         super(worldIn);

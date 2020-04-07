@@ -21,7 +21,9 @@ tile.eldermod.elder_wood_stairs.name=Elder Wood Stairs
 tile.eldermod.elder_wood.name=Elder Wood
 
 ## Entity
-entity.eldermod.worm.name=Regent Worm
-entity.eldermod.kelpie_tar_ball=Kelpie Tar Ball
+entity.Worm.name=Regent Worm
+entity.Kelpie.name=Elder Kelpie
+entity.kelpie_tar_ball.name=Kelpie Tar Ball
+
 
 
