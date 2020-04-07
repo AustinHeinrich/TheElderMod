@@ -13,9 +13,8 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-
-// TODO add a texture to the thrown ball
 
 public class KelpieTarBall extends ItemThrownBase {
 
@@ -32,8 +31,8 @@ public class KelpieTarBall extends ItemThrownBase {
             itemstack.shrink(1);
         }
 
-        worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SLIME_ATTACK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
         if (!worldIn.isRemote) {
+            worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SLIME_ATTACK, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
             EntityKelpieTarBall tarBall = new EntityKelpieTarBall(worldIn, playerIn);
             tarBall.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
             worldIn.spawnEntity(tarBall);

@@ -23,7 +23,8 @@ public class ModEntities {
 
     public static void init() {
         int id = 1;
-        EntityRegistry.registerModEntity(REGENT_WORM, EntityWorm.class, "Worm", id++, Elder.instance, 64, 3, true, 0x996600, 0x00ff00);
+        EntityRegistry.registerModEntity(REGENT_WORM, EntityWorm.class, "Worm", id++, Elder.instance,
+                64, 3, true, 0x996600, 0x00ff00);
         EntityRegistry.addSpawn(EntityWorm.class, 100, 3, 5, EnumCreatureType.MONSTER, Biomes.PLAINS, Biomes.ICE_PLAINS);
         LootTableList.register(EntityWorm.LOOT);
 

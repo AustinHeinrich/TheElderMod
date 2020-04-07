@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntitySlime;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.Item;
@@ -43,6 +44,15 @@ public class EntityKelpieTarBall extends EntityThrowable {
         if ((!world.isRemote && result.entityHit != null)  && !(result.entityHit instanceof EntitySlime)) {
             result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getThrower()), (float)dmg);
             ((EntityLivingBase) result.entityHit).addPotionEffect(potEff);
+        }
+    }
+
+    public void onUpdate() {
+        EntityLivingBase thrower = this.getThrower();
+        if (thrower != null && thrower instanceof EntityPlayer && !thrower.isEntityAlive()) {
+            this.setDead();
+        } else {
+            super.onUpdate();
         }
     }
 }
