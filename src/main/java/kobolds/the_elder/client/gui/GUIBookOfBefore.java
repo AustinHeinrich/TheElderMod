@@ -1,16 +1,16 @@
 package kobolds.the_elder.client.gui;
 
+import com.jcraft.jogg.Page;
 import kobolds.the_elder.Elder;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.*;
 import net.minecraft.client.resources.I18n;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraftforge.client.event.RenderTooltipEvent;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.opengl.GL11;
 
 import java.io.IOException;
 
@@ -22,23 +22,57 @@ public class GUIBookOfBefore extends GuiScreen {
 
     private int currPage = 0;
 
-    private static ResourceLocation[] bookPageTexture = new ResourceLocation[BOOK_PAGES];
-    private static String[] pageText = new String[BOOK_PAGES];
+    private static ResourceLocation[] bookPageTexture;
+    private static String[] pageText;
     private GuiButton exitButton;
-    private GuiButton nextButton;
-    private GuiButton prevButton;
+    private PageTurnButton nextButton;
+    private PageTurnButton prevButton;
 
     public GUIBookOfBefore() {
+        bookPageTexture = new ResourceLocation[BOOK_PAGES];
         bookPageTexture[0] = new ResourceLocation(Elder.MODID, "textures/gui/book_of_before.png");
-        bookPageTexture[1] = bookPageTexture[0];
+        bookPageTexture[1] = bookPageTexture[0]; // page 2 should be portal configuration, and instruction to use book to open portal
 
-        pageText[0] = "The Elder \n test test test test";
-        pageText[1] = "page 2 test test test test test test";
+        pageText = new String[BOOK_PAGES];
+        pageText[0] = "The Elder \n " +
+                "Before there was time. \n " +
+                "Before there was anything. \n " +
+                "There was the world that was and we called it home. \n " +
+                "Now we lie forgotten in past beyond past, grown distant yet strong. Search for us there, dreamer.";
+        pageText[1] = "haha ye just pretend there's instructions to construct the portal here";
+    }
+
+    // adds buttons and controls to the gui
+    @Override
+    public void initGui() {
+        int offsetFromScreenLeft = (width - BOOK_WIDTH) / 2;
+        int buttonId = 0;
+
+        buttonList.clear();
+        Keyboard.enableRepeatEvents(true);
+
+        // exit button
+        exitButton = new GuiButton(buttonId++, width / 2, 4 + BOOK_HEIGHT, 98, 20,
+                I18n.format("gui.done", new Object[0]));
+        buttonList.add(exitButton);
+
+        // arrows
+        this.nextButton = (PageTurnButton)this.addButton(new PageTurnButton(buttonId++, offsetFromScreenLeft+120, 156, true));
+        this.prevButton = (PageTurnButton)this.addButton(new PageTurnButton(buttonId++, offsetFromScreenLeft+38, 156, false));
+        this.updateScreen();
+    }
+
+    @Override
+    public void updateScreen() {
+        prevButton.visible = currPage > 0;
+        nextButton.visible = (currPage < BOOK_PAGES - 1);
     }
 
     @Override
     public void drawScreen(int mouseX, int mouseY, float partialTicks) {
         int offsetFromScreenLeft = (width - BOOK_WIDTH) / 2;
+        String pageIndicator = I18n.format("book.pageIndicator",
+                new Object[] {Integer.valueOf(currPage + 1), BOOK_PAGES});
 
         drawDefaultBackground(); // darken the background
 
@@ -48,19 +82,10 @@ public class GUIBookOfBefore extends GuiScreen {
 
         // text
         this.fontRenderer.drawSplitString(pageText[currPage],offsetFromScreenLeft + 36, 34, 116,0x00000);
+        this.fontRenderer.drawString(pageIndicator, offsetFromScreenLeft -
+                this.fontRenderer.getStringWidth(pageIndicator) + BOOK_WIDTH - 44, 18, 0 );
+
         super.drawScreen(mouseX, mouseY, partialTicks);
-    }
-
-    @Override
-    public void initGui() {
-        int offsetFromScreenLeft = (width - BOOK_WIDTH) / 2;
-
-        buttonList.clear();
-        Keyboard.enableRepeatEvents(true);
-
-        exitButton = new GuiButton(0, width / 2, 4 + BOOK_HEIGHT, 98, 20,
-                I18n.format("gui.done", new Object[0]));
-        buttonList.add(exitButton);
     }
 
     // work the buttons
@@ -85,5 +110,35 @@ public class GUIBookOfBefore extends GuiScreen {
     @Override
     public boolean doesGuiPauseGame() {
         return false;
+    }
+
+    @SideOnly(Side.CLIENT)
+    static class PageTurnButton extends GuiButton {
+        private boolean isPageForwardButton;
+        int positionX;
+        int positionY;
+
+        public PageTurnButton(int buttonId, int posX, int posY, boolean isPageForwardButton) {
+            super(buttonId, posX, posY, 23, 15,"");
+            this.isPageForwardButton = isPageForwardButton;
+            this.positionX = posX;
+            this.positionY = posY;
+        }
+
+        // draw the button on screen
+        @Override
+        public void drawButton(Minecraft mc, int x, int y, float partialTicks) {
+            if (visible) {
+                int textureX = 25;
+                int textureY = 192;
+                if (!isPageForwardButton) {
+                    textureY += 13;
+                }
+
+                GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+                mc.getTextureManager().bindTexture(bookPageTexture[0]);
+                drawTexturedModalRect(this.positionX, this.positionY, textureX, textureY, 25, 13);
+            }
+        }
     }
 }
