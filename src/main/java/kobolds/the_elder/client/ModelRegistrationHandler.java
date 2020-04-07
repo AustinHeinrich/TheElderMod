@@ -23,6 +23,7 @@ public class ModelRegistrationHandler {
         // blocks
         registerBlock(ModBlocks.COLD_IRON_ORE, stateMapper);
         registerBlock(ModBlocks.ELDER_DIRT, stateMapper);
+        registerBlock(ModBlocks.ELDER_SAPLING, stateMapper);
         registerBlock(ModBlocks.ELDER_STONE, stateMapper);
         registerBlock(ModBlocks.ELDER_WOOD, stateMapper);
         registerBlock(ModBlocks.ELDER_WOOD_PLANKS, stateMapper);
