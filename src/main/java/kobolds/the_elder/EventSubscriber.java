@@ -63,7 +63,6 @@ public class EventSubscriber {
         ModDimensions.registerDimensions();
         ModWorldGen.registerCustomStructures();
         ModPotions.registerPotions();
-        ModEntities.initModels();
 
         ModEvents.registerEvents();
     }

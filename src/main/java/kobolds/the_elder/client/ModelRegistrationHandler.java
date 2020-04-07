@@ -32,6 +32,7 @@ public class ModelRegistrationHandler {
         // items
         registerItemModel(ModItems.BOOK_OF_BEFORE, 0);
         registerItemModel(ModItems.ELDER_TELEPORTER, 0);
+        registerItemModel(ModItems.KELPIE_TAR_BALL, 0);
     }
 
     private static void registerBlock(Block block, IStateMapper stateMapper) {

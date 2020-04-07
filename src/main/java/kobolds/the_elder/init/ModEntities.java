@@ -7,7 +7,10 @@ import kobolds.the_elder.entities.RenderKelpieTarBall;
 import kobolds.the_elder.entities.RenderWorm;
 
 import kobolds.the_elder.items.KelpieTarBall;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.entity.EnumCreatureType;
+import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootTableList;
@@ -15,6 +18,7 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import sun.net.www.MimeEntry;
 
 public class ModEntities {
 
@@ -29,12 +33,12 @@ public class ModEntities {
         LootTableList.register(EntityWorm.LOOT);
 
         EntityRegistry.registerModEntity(KELPIE_TAR_BALL, EntityKelpieTarBall.class, "Kelpie Tar Ball",
-                id++, Elder.instance, 64, 1, true);
+                id++, Elder.instance, 64, 10, true);
     }
 
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         RenderingRegistry.registerEntityRenderingHandler(EntityWorm.class, RenderWorm.FACTORY);
-        RenderingRegistry.registerEntityRenderingHandler(EntityKelpieTarBall.class, RenderKelpieTarBall.FACTORY);
+        // RenderingRegistry.registerEntityRenderingHandler(EntityKelpieTarBall.class, RenderKelpieTarBall.FACTORY);
     }
 }
