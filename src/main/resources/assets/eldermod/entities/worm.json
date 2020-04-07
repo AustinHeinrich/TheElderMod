@@ -1,7 +1,7 @@
 {
   "pools": [
     {
-      "name": "the_elder:temp",
+      "name": "the_elder:worm",
       "rolls": 1,
       "entries": [
         {
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "name": "the_elder:temp",
+      "name": "the_elder:worm",
       "conditions": [
         {
           "condition": "killed_by_player"

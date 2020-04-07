@@ -3,8 +3,10 @@ package kobolds.the_elder.init;
 import kobolds.the_elder.Elder;
 import kobolds.the_elder.entities.EntityKelpieTarBall;
 import kobolds.the_elder.entities.EntityWorm;
+import kobolds.the_elder.entities.RenderKelpieTarBall;
 import kobolds.the_elder.entities.RenderWorm;
 
+import kobolds.the_elder.items.KelpieTarBall;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.init.Biomes;
 import net.minecraft.util.ResourceLocation;
@@ -32,5 +34,6 @@ public class ModEntities {
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         RenderingRegistry.registerEntityRenderingHandler(EntityWorm.class, RenderWorm.FACTORY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityKelpieTarBall.class, RenderKelpieTarBall.FACTORY);
     }
 }

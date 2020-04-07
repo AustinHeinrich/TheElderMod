@@ -127,12 +127,22 @@ public class GUIBookOfBefore extends GuiScreen {
 
         // draw the button on screen
         @Override
-        public void drawButton(Minecraft mc, int x, int y, float partialTicks) {
+        public void drawButton(Minecraft mc, int mouseX, int mouseY, float partialTicks) {
             if (visible) {
-                int textureX = 25;
+                int textureX = 0;
                 int textureY = 192;
+                boolean isButtonHover =
+                        (mouseX >= this.positionX &&
+                         mouseY >= this.positionY &&
+                         mouseX < this.positionX + width &&
+                         mouseY < this.positionY + height);
+
                 if (!isPageForwardButton) {
                     textureY += 13;
+                }
+
+                if (isButtonHover) {
+                    textureX += 23;
                 }
 
                 GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
