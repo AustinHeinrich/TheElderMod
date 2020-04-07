@@ -30,7 +30,7 @@ public class GUIBookOfBefore extends GuiScreen {
 
     public GUIBookOfBefore() {
         bookPageTexture = new ResourceLocation[BOOK_PAGES];
-        bookPageTexture[0] = new ResourceLocation(Elder.MODID, "textures/gui/book_of_before.png");
+        bookPageTexture[0] = new ResourceLocation(Elder.MODID, "textures/gui/book_of_before_gui.png");
         bookPageTexture[1] = bookPageTexture[0]; // page 2 should be portal configuration, and instruction to use book to open portal
 
         pageText = new String[BOOK_PAGES];
