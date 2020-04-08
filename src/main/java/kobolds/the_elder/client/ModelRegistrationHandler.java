@@ -23,6 +23,7 @@ public class ModelRegistrationHandler {
         // blocks
         registerBlock(ModBlocks.COLD_IRON_ORE, stateMapper);
         registerBlock(ModBlocks.ELDER_DIRT, stateMapper);
+        registerBlock(ModBlocks.ELDER_SAPLING, stateMapper);
         registerBlock(ModBlocks.ELDER_STONE, stateMapper);
         registerBlock(ModBlocks.ELDER_WOOD, stateMapper);
         registerBlock(ModBlocks.ELDER_WOOD_PLANKS, stateMapper);
@@ -32,6 +33,7 @@ public class ModelRegistrationHandler {
         // items
         registerItemModel(ModItems.BOOK_OF_BEFORE, 0);
         registerItemModel(ModItems.ELDER_TELEPORTER, 0);
+        registerItemModel(ModItems.KELPIE_TAR_BALL, 0);
     }
 
     private static void registerBlock(Block block, IStateMapper stateMapper) {

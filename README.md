@@ -52,3 +52,6 @@
 - Some structures may load without textures, because those blocks do not yet have textures.
 
 - By pressing "F3" you can bring up an information screen. Particularly, in the bottom right it displays the block you are looking at. You may also see coordinates ("XYZ:") and your current environment ("Biome:").
+
+- To build the portal, place Elder Cores on the same height at the following coordinates (x, z): (-2, -2), (1, -2), (1, 1), (-2, 1). Connect the cores with Elder Frames so that you have a 4x4 square. You do not have to fill in the four blocks in the centre of the square. Right click each core with the Book of Before to activate the cores. Once the final core is activated, the portal will open, and the player can jump into it to teleport to the Elder.
+

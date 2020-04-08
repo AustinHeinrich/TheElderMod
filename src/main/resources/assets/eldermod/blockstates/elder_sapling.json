@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "elder_sapling"
+    },
+    "stage=1": {
+      "model": "elder_sapling"
+    }
+  }
+}

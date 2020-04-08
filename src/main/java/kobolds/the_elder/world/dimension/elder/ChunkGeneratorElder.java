@@ -25,7 +25,7 @@ import net.minecraft.world.gen.NoiseGeneratorOctaves;
 import net.minecraft.world.gen.NoiseGeneratorPerlin;
 
 public class ChunkGeneratorElder implements IChunkGenerator {
-	protected static final IBlockState STONE = Blocks.STONE.getDefaultState();
+	protected static final IBlockState STONE = ModBlocks.ELDER_STONE.getDefaultState();
 	protected static final IBlockState GRAVEL = Blocks.GRAVEL.getDefaultState();
 	protected static final IBlockState WATER = Blocks.WATER.getDefaultState();
 	protected static final IBlockState AIR = Blocks.AIR.getDefaultState();

@@ -45,8 +45,8 @@ public class WorldGenCustomStructures implements IWorldGenerator {
         // TODO randomize chest items from treasure table
         generateStructure(OLD_ADVENTURER_HOUSE, world, random, chunkX, chunkZ, 400, Blocks.GRASS, ModBiomes.GARDEN);
         // waytower chance = 110
-        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
-        generateStructure(OLD_WAYTOWER_VARIANT, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN);
+        generateStructure(OLD_WAYTOWER, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN, ModBiomes.ELDER_DIMENSION);
+        generateStructure(OLD_WAYTOWER_VARIANT, world, random, chunkX, chunkZ, 110, Blocks.GRASS, ModBiomes.GARDEN, ModBiomes.ELDER_DIMENSION);
         // night safety chance = 175
         generateStructure(NIGHT_SAFETY, world, random, chunkX, chunkZ, 175, Blocks.GRASS, ModBiomes.ELDER_DIMENSION);
     }

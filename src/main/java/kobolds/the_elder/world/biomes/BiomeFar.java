@@ -2,7 +2,7 @@ package kobolds.the_elder.world.biomes;
 
 import net.minecraft.world.biome.Biome;
 
-public class BiomeFar extends Biome {
+public class BiomeFar extends ElderBiomeBase {
 
 	public BiomeFar() {
         super(new BiomeProperties("Far")
@@ -11,6 +11,7 @@ public class BiomeFar extends Biome {
         		.setTemperature(0.6F)
         		.setRainDisabled()
         		.setWaterColor(12345678));
+
         this.decorator.treesPerChunk = 7;
     }
 }

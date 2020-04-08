@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "eldermod:blocks/elder_portal_frame_inactive"
+  }
+}

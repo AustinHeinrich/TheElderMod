@@ -1,6 +1,7 @@
-package kobolds.the_elder.entities;
+package kobolds.the_elder.entities.render;
 
 import kobolds.the_elder.Elder;
+import kobolds.the_elder.entities.EntityWorm;
 import net.minecraft.client.model.ModelSilverfish;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;

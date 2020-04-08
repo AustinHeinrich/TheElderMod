@@ -1,15 +1,17 @@
 package kobolds.the_elder.world.biomes;
 
+import kobolds.the_elder.entities.EntityKelpie;
+import java.util.Random;
 import kobolds.the_elder.entities.EntityWorm;
+import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.world.gen.ElderTreeGenerator;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.init.Blocks;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
-import java.util.Random;
-
-public class BiomeGarden extends Biome {
-
+public class BiomeGarden extends ElderBiomeBase {
 	protected static final ElderTreeGenerator TREE = new ElderTreeGenerator(false, true);
 	
 	public BiomeGarden() {
@@ -21,7 +23,7 @@ public class BiomeGarden extends Biome {
 				.setWaterColor(3138975));
 
 		this.topBlock = Blocks.GRASS.getDefaultState();
-		this.fillerBlock = Blocks.OBSIDIAN.getDefaultState();
+		this.fillerBlock = ModBlocks.ELDER_DIRT.getDefaultState();
 
 		this.decorator.treesPerChunk = 2;
 
@@ -39,4 +41,5 @@ public class BiomeGarden extends Biome {
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
 		return TREE;
 	}
+
 }
