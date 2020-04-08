@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class GUIBookOfBefore extends GuiScreen {
 
-    private static final int BOOK_PAGES = 2;
+    private static final int BOOK_PAGES = 3;
     private static final int BOOK_HEIGHT = 192;
     private static final int BOOK_WIDTH = 192;
 
@@ -32,6 +32,7 @@ public class GUIBookOfBefore extends GuiScreen {
         bookPageTexture = new ResourceLocation[BOOK_PAGES];
         bookPageTexture[0] = new ResourceLocation(Elder.MODID, "textures/gui/book_of_before_gui.png");
         bookPageTexture[1] = bookPageTexture[0]; // page 2 should be portal configuration, and instruction to use book to open portal
+        bookPageTexture[2] = bookPageTexture[0];
 
         pageText = new String[BOOK_PAGES];
         pageText[0] = "The Elder \n " +
@@ -39,9 +40,9 @@ public class GUIBookOfBefore extends GuiScreen {
                 "Before there was anything. \n " +
                 "There was the world that was and we called it home. \n " +
                 "Now we lie forgotten in past beyond past, grown distant yet strong. Search for us there, dreamer.";
-        pageText[1] = "To make portal: \n" +
-                "- arrange blocks like a nether portal \n" +
-                "- place core blocks in corners";
+        pageText[1] = "To enter the Elder \n" +
+                "Construct two blocks: elder portal frames, elder portal cores. Construct the portal frames on flat ground, like an end portal, placing the cores in the corners. Attach cores with frames and right click the cores with this book. The center of the portal";
+        pageText[2] = "must be the center of the world. (coordinates x=0, z=0 should be the center of the portal)";
     }
 
     // adds buttons and controls to the gui
