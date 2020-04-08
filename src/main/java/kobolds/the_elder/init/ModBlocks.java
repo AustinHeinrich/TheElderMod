@@ -25,4 +25,7 @@ public class ModBlocks  {
     public static final Block ELDER_WOOD_STAIRS = new StairsBlockBase("elder_wood_stairs", ModBlocks.ELDER_WOOD_PLANKS.getDefaultState());
     public static final Block KELPIE_TAR_LAYER = new KelpieTarLayer("kelpie_tar_layer", Material.CARPET);
     public static final Block PACTMAKER_NIGHT_SAFETY = new PactmakerNightSafety("pactmaker_night_safety", Material.REDSTONE_LIGHT);
+    public static final Block ELDER_PORTAL_FRAME = new BlockElderPortalFrame("elder_portal_frame");
+    public static final Block ELDER_PORTAL_CORE = new BlockElderPortalFrame("elder_portal_core");
+    public static final Block ELDER_PORTAL = new BlockElderPortal(Material.PORTAL, "elder_portal");
 }

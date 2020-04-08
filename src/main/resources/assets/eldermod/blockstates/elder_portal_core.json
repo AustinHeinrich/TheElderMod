@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "active=true":  { "model": "eldermod:elder_portal_core_active" },
+    "active=false": { "model": "eldermod:elder_portal_core_inactive" }
+  }
+}

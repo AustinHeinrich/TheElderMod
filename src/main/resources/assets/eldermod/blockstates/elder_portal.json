@@ -1,0 +1,10 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "eldermod:elder_portal"
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    }
+}
