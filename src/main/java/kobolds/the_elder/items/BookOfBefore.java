@@ -14,15 +14,18 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
+import kobolds.the_elder.client.gui.GUIBookOfBefore;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
 
 /*
   BookOfBefore is a book the player can right-click to gain info about the mod
-
-  TODO make this book -- need a gui handler, I think?
  */
+
 public class BookOfBefore extends ItemBase {
-    // aka the Elder aka the Land Before Time feat. Littlefoot's mom
+    // the Elder Scroll!
 
     public BookOfBefore(String name) {
         super(name);
@@ -169,5 +172,12 @@ public class BookOfBefore extends ItemBase {
         }
         System.out.println("Valid portal construction found.");
         return true;
+
+    // on right click, display the book
+    @Override
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+        Minecraft.getMinecraft().displayGuiScreen(new GUIBookOfBefore());
+
+        return super.onItemRightClick(worldIn, playerIn, handIn);
     }
 }

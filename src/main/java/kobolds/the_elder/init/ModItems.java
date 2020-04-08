@@ -15,7 +15,7 @@ public class ModItems {
 
     public static final List<Item> ITEMS = new ArrayList<>();
 
-    public static final Item BOOK_OF_BEFORE =       new BookOfBefore("book_of_before");
-    public static final Item ELDER_TELEPORTER =     new ElderTeleporter("elder_teleporter");
-    public static final Item KELPIE_TAR_BALL =      new KelpieTarBall("kelpie_tar_ball");
+    public static final Item BOOK_OF_BEFORE = new BookOfBefore("book_of_before");
+    public static final Item ELDER_TELEPORTER = new ElderTeleporter("elder_teleporter");
+    public static final Item KELPIE_TAR_BALL = new KelpieTarBall("kelpie_tar_ball");
 }

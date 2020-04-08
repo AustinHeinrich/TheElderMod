@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "eldermod:items/book_of_before"
+    "layer0": "eldermod:items/kelpie_tar_ball"
   }
 }
