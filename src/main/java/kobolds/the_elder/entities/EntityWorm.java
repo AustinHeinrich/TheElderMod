@@ -36,19 +36,18 @@ public class EntityWorm extends EntityMob {
     protected void applyEntityAttributes() {
         super.applyEntityAttributes();
 
-        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(35.0d);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.13d);
-        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(3.0d);
-        this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(2.0d);
+        this.getEntityAttribute(SharedMonsterAttributes.FOLLOW_RANGE).setBaseValue(60.0d);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.16d);
+        this.getEntityAttribute(SharedMonsterAttributes.ATTACK_DAMAGE).setBaseValue(20.0d);
+        this.getEntityAttribute(SharedMonsterAttributes.ARMOR).setBaseValue(4.0d);
     }
 
     @Override
     protected void initEntityAI() {
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIWormAttack(this, 2.0d, false));
-        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 2.0d));
-        this.tasks.addTask(7, new EntityAIWander(this, 2.0d));
-        this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0f));
+        this.tasks.addTask(2, new EntityAIWormAttack(this, 3.0d, false));
+        this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 3.0d));
+        this.tasks.addTask(7, new EntityAIWander(this, 3.0d));
         this.tasks.addTask(8, new EntityAILookIdle(this));
         this.applyEntityAI();
     }
@@ -56,9 +55,9 @@ public class EntityWorm extends EntityMob {
     private void applyEntityAI() {
         this.tasks.addTask(6, new EntityAIMoveThroughVillage(this, 1.0d, false));
         this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, true, new Class[]{EntityPigZombie.class}));
-        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, true));
+        this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, false));
         this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityVillager.class, false));
-        this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityIronGolem.class, true));
+        this.targetTasks.addTask(3, new EntityAINearestAttackableTarget(this, EntityIronGolem.class, false));
     }
 
     @Override
@@ -78,11 +77,6 @@ public class EntityWorm extends EntityMob {
     @Nullable
     protected ResourceLocation getLootTable() {
         return LOOT;
-    }
-
-    @Override
-    protected boolean isValidLightLevel() {
-        return true;
     }
 
     @Override
