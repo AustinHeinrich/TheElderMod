@@ -32,8 +32,9 @@ public class ModEntities {
 
         EntityRegistry.registerModEntity(KELPIE, EntityKelpie.class, "Kelpie", id++, Elder.instance,
                 25, 3, true, 0x301934, 0xfffff);
-        EntityRegistry.addSpawn(EntityKelpie.class, 100, 3, 5, EnumCreatureType.WATER_CREATURE, Biomes.OCEAN);
+        EntityRegistry.addSpawn(EntityKelpie.class, 100, 3, 5, EnumCreatureType.WATER_CREATURE);
         LootTableList.register(EntityKelpie.LOOT);
+
         EntityRegistry.registerModEntity(KELPIE_TAR_BALL, EntityKelpieTarBall.class, "Kelpie Tar Ball",
                 id++, Elder.instance, 64, 10, true);
     }

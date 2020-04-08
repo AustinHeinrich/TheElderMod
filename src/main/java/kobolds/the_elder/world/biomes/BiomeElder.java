@@ -1,5 +1,6 @@
 package kobolds.the_elder.world.biomes;
 
+import kobolds.the_elder.entities.EntityKelpie;
 import net.minecraft.world.biome.Biome;
 
 public class BiomeElder extends Biome {
@@ -11,5 +12,5 @@ public class BiomeElder extends Biome {
         		.setTemperature(0.6F)
         		.setRainDisabled()
         		.setWaterColor(12345678));
-    }
+	}
 }

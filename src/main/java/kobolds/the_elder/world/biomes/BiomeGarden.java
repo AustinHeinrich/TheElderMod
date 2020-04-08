@@ -1,7 +1,9 @@
 package kobolds.the_elder.world.biomes;
 
+import kobolds.the_elder.entities.EntityKelpie;
 import kobolds.the_elder.entities.EntityWorm;
 import kobolds.the_elder.world.gen.ElderTreeGenerator;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
