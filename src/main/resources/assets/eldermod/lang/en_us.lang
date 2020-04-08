@@ -12,6 +12,8 @@ tile.eldermod.elder_dirt.name=Elder Dirt
 tile.eldermod.elder_stone.name=Elder Stone
 tile.eldermod.kelpie_tar_layer.name=Kelpie Tar
 tile.eldermod.pactmaker_night_safety.name=Pactmaker Nighttime Helper Boy
+tile.eldermod.elder_portal_core.name=Elder Portal Core
+tile.eldermod.elder_portal_frame.name=Elder Portal Frame
 
 ## Blocks / Wood
 tile.eldermod.elder_leaves.name=Elder Leaves
