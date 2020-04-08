@@ -1,11 +1,7 @@
 package kobolds.the_elder.world.biomes;
 
-<<<<<<< src/main/java/kobolds/the_elder/world/biomes/BiomeGarden.java
 import kobolds.the_elder.entities.EntityKelpie;
-=======
 import java.util.Random;
-
->>>>>>> src/main/java/kobolds/the_elder/world/biomes/BiomeGarden.java
 import kobolds.the_elder.entities.EntityWorm;
 import kobolds.the_elder.world.gen.ElderTreeGenerator;
 import net.minecraft.entity.EntityLiving;
