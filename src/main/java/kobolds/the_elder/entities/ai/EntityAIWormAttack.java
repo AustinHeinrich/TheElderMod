@@ -1,5 +1,6 @@
-package kobolds.the_elder.entities;
+package kobolds.the_elder.entities.ai;
 
+import kobolds.the_elder.entities.EntityWorm;
 import net.minecraft.entity.ai.EntityAIAttackMelee;
 
 public class EntityAIWormAttack extends EntityAIAttackMelee {

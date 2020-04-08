@@ -11,12 +11,19 @@ tile.eldermod.cold_iron_ore.name=Cold Iron Ore
 tile.eldermod.elder_dirt.name=Elder Dirt
 tile.eldermod.elder_stone.name=Elder Stone
 tile.eldermod.kelpie_tar_layer.name=Kelpie Tar
+tile.eldermod.pactmaker_night_safety.name=Pactmaker Nighttime Helper Boy
 
 ## Blocks / Wood
 tile.eldermod.elder_leaves.name=Elder Leaves
 tile.eldermod.elder_wood_planks.name=Elder Wood Planks
-tile.eldermod.elder_sapling.name=Elder Spapling
+tile.eldermod.elder_sapling.name=Elder Sapling
 tile.eldermod.elder_wood_stairs.name=Elder Wood Stairs
 tile.eldermod.elder_wood.name=Elder Wood
+
+## Entity
+entity.Worm.name=Regent Worm
+entity.Kelpie.name=Elder Kelpie
+entity.kelpie_tar_ball.name=Kelpie Tar Ball
+
 
 

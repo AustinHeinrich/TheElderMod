@@ -1,5 +1,5 @@
 {
-  "parent": "block/stairs",
+  "parent": "block/outer_stairs",
   "textures": {
     "bottom": "eldermod:blocks/elder_wood_planks",
     "top": "eldermod:blocks/elder_wood_planks",

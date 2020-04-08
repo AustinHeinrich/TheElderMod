@@ -5,7 +5,6 @@ import kobolds.the_elder.init.ModBiomes;
 import kobolds.the_elder.init.ModPotions;
 import kobolds.the_elder.world.dimension.elder.DimensionElder;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.init.MobEffects;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.math.BlockPos;
@@ -14,9 +13,6 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-
 
 public class NightHindranceEvent {
 

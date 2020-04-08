@@ -5,6 +5,7 @@ import kobolds.the_elder.blocks.base.BlockBase;
 import kobolds.the_elder.blocks.base.OreBlockBase;
 import kobolds.the_elder.blocks.base.StairsBlockBase;
 import kobolds.the_elder.commands.CommandDimensionTeleport;
+import kobolds.the_elder.entities.EntityKelpieTarBall;
 import kobolds.the_elder.init.*;
 import kobolds.the_elder.items.ElderTeleporter;
 import kobolds.the_elder.items.KelpieTarBall;
@@ -23,6 +24,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import kobolds.the_elder.blocks.base.WoodBlockBase;
 import kobolds.the_elder.items.BookOfBefore;
+import net.minecraftforge.fml.common.registry.EntityRegistry;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 import static kobolds.the_elder.init.ModBlocks.ELDER_WOOD_PLANKS;
