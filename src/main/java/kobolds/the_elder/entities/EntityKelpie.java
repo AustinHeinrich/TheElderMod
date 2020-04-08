@@ -2,11 +2,15 @@ package kobolds.the_elder.entities;
 
 import kobolds.the_elder.Elder;
 
+import kobolds.the_elder.entities.ai.EntityAIDrownRider;
 import kobolds.the_elder.entities.ai.EntityAISwimmingConsiderPassenger;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.ai.EntityAIPanic;
 import net.minecraft.entity.passive.EntityHorse;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
@@ -24,35 +28,40 @@ public class EntityKelpie extends EntityHorse {
     @Override
     protected void initEntityAI() {
         this.tasks.addTask(0, new EntityAISwimmingConsiderPassenger(this));
-
+        this.tasks.addTask(1, new EntityAIPanic(this, 1.2D));
         // TODO grab a player and put them as passenger
-
-        // TODO if it has a passenger, swim deeper
+        // TODO if it has a passenger, swim until submerged (i.e. at least 3 blocks underwater if available)
     }
 
     @Override
-    public boolean attackEntityFrom (DamageSource source, float damageAmount) {
-        final Entity player = source.getTrueSource();
-        boolean isRidden = this.isRidingOrBeingRiddenBy(player);
+    public boolean attackEntityFrom (DamageSource source, float amount) {
+        final Entity entity = source.getTrueSource();
+        return entity != null && this.isRidingOrBeingRiddenBy(entity) ? super.attackEntityFrom(DamageSource.OUT_OF_WORLD, amount / 2F) : super.attackEntityFrom(source, amount);
+    }
 
-        // allow player to damage the Kelpie while it is mounted, damages Kelpie out of water
-        return (player != null) && isRidden ? super.attackEntityFrom(DamageSource.OUT_OF_WORLD, damageAmount*2) : super.attackEntityFrom(source, damageAmount);
+    @Override
+    public boolean processInteract(EntityPlayer player, EnumHand hand) {
+        this.mountTo(player);
+        return true;
     }
 
     @Override
     public void dismountRidingEntity() {
-        super.dismountRidingEntity();
+        Entity entity = this.getRidingEntity();
+        if (entity != null && entity.isDead) {
+            super.dismountRidingEntity();
+        }
     }
 
     @Override
-    public boolean canPassengerSteer() {
+    public boolean canRiderInteract() {
         // THE KELPIE IS IN CONTROL
         return false;
     }
 
     @Override
-    public boolean canRiderInteract() {
-        return true;
+    public boolean canPassengerSteer() {
+        return false;
     }
 
     @Override
@@ -61,30 +70,8 @@ public class EntityKelpie extends EntityHorse {
     }
 
     @Override
-    public boolean isPushedByWater() {
-        return false;
-    }
-
-    @Override
     public boolean canBreatheUnderwater() {
         return true;
-    }
-
-    @Override
-    protected boolean canTriggerWalking() {
-        // can't break crops by walking
-        return false;
-    }
-
-    @Override
-    protected boolean canMate() {
-        // prevents spawning horse babies and survival baby spawning. Can spawn babies in creative
-        return false;
-    }
-
-    @Override
-    public boolean wearsArmor() {
-        return false;
     }
 
     @Override

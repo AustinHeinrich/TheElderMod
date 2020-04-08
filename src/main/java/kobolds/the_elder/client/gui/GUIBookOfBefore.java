@@ -39,7 +39,9 @@ public class GUIBookOfBefore extends GuiScreen {
                 "Before there was anything. \n " +
                 "There was the world that was and we called it home. \n " +
                 "Now we lie forgotten in past beyond past, grown distant yet strong. Search for us there, dreamer.";
-        pageText[1] = "haha ye just pretend there's instructions to construct the portal here";
+        pageText[1] = "To make portal: \n" +
+                "- arrange blocks like a nether portal \n" +
+                "- place core blocks in corners";
     }
 
     // adds buttons and controls to the gui
