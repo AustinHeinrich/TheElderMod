@@ -11,6 +11,7 @@ public class BiomeFar extends ElderBiomeBase {
         		.setTemperature(0.6F)
         		.setRainDisabled()
         		.setWaterColor(12345678));
+
         this.decorator.treesPerChunk = 7;
     }
 }

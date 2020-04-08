@@ -136,18 +136,15 @@ public class BookOfBefore extends ItemBase {
         }
     }
 
-    protected boolean verifyPortalConstruction(World worldIn, BlockPos pos, int portalY, BlockPos[] corePositions)
-    {
+    protected boolean verifyPortalConstruction(World worldIn, BlockPos pos, int portalY, BlockPos[] corePositions) {
         int numFramesPerSide = Elder.PORTAL_SIZE - 2;
 
         EnumFacing facing = EnumFacing.NORTH;
 
-        for (BlockPos corePos : corePositions)
-        {
+        for (BlockPos corePos : corePositions) {
             BlockPos posWalker = corePos;
             // check if the block at the core position is a core
-            if (worldIn.getBlockState(corePos).getBlock() != ModBlocks.ELDER_PORTAL_CORE)
-            {
+            if (worldIn.getBlockState(corePos).getBlock() != ModBlocks.ELDER_PORTAL_CORE) {
                 System.out.println("Invalid portal construction - core placement");
                 return false;
             }
@@ -155,13 +152,11 @@ public class BookOfBefore extends ItemBase {
             System.out.println("Valid core placement at: " + corePos.getX() + ", " + corePos.getY() + ", " + corePos.getZ() + " . Checking Frames...");
 
             // check the frames
-            for (int i=0; i < numFramesPerSide; i++)
-            {
+            for (int i = 0; i < numFramesPerSide; i++) {
                 // move the walker 1 in the facing direction
                 posWalker = posWalker.offset(facing);
                 // check if the block at the new pos is a frame
-                if (worldIn.getBlockState(posWalker).getBlock() != ModBlocks.ELDER_PORTAL_FRAME)
-                {
+                if (worldIn.getBlockState(posWalker).getBlock() != ModBlocks.ELDER_PORTAL_FRAME) {
                     System.out.println("Invalid frame placement at: " + posWalker.getX() + ", " + posWalker.getY() + ", " + posWalker.getZ());
                     return false;
                 }
@@ -172,6 +167,7 @@ public class BookOfBefore extends ItemBase {
         }
         System.out.println("Valid portal construction found.");
         return true;
+    }
 
     // on right click, display the book
     @Override

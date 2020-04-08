@@ -1,0 +1,8 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "normal": {
+      "model": "eldermod:elder_portal_core_active"
+    }
+  }
+}

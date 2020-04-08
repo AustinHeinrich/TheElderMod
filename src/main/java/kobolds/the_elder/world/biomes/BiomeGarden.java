@@ -3,6 +3,7 @@ package kobolds.the_elder.world.biomes;
 import kobolds.the_elder.entities.EntityKelpie;
 import java.util.Random;
 import kobolds.the_elder.entities.EntityWorm;
+import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.world.gen.ElderTreeGenerator;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.init.Blocks;
@@ -22,7 +23,7 @@ public class BiomeGarden extends ElderBiomeBase {
 				.setWaterColor(3138975));
 
 		this.topBlock = Blocks.GRASS.getDefaultState();
-		this.fillerBlock = Blocks.OBSIDIAN.getDefaultState();
+		this.fillerBlock = ModBlocks.ELDER_DIRT.getDefaultState();
 
 		this.decorator.treesPerChunk = 2;
 
