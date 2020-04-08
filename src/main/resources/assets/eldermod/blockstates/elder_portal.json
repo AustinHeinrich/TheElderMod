@@ -1,6 +1,10 @@
 {
+    "forge_marker": 1,
+    "defaults": {
+        "model": "eldermod:elder_portal"
+    },
     "variants": {
-        "axis=z": { "model": "portal_ew" },
-        "axis=x": { "model": "portal_ns" }
+        "normal": [{}],
+        "inventory": [{}]
     }
 }

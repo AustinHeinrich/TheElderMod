@@ -4,6 +4,7 @@ import com.google.common.base.Predicates;
 import kobolds.the_elder.Elder;
 import kobolds.the_elder.init.ModBlocks;
 import kobolds.the_elder.init.ModItems;
+import kobolds.the_elder.util.interfaces.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.MapColor;
@@ -36,7 +37,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Random;
 
-public class BlockElderPortalFrame extends Block {
+public class BlockElderPortalFrame extends Block implements IHasModel {
     public static final PropertyBool ACTIVE = PropertyBool.create("active");
 
     public BlockElderPortalFrame(String name)
@@ -51,6 +52,10 @@ public class BlockElderPortalFrame extends Block {
         ModItems.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
 
         this.setDefaultState(this.blockState.getBaseState().withProperty(ACTIVE, false));
+    }
+
+    public void registerModels() {
+        Elder.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
     }
 
     /**
