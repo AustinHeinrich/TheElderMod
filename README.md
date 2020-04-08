@@ -1,8 +1,7 @@
-===============
 == THE ELDER == 
 ===============
 
-The Elder for someone who has never played Minecraft or even video games at all:
+*Otherwise: The Elder for someone who has never played Minecraft or even video games at all.*
 
 #### To launch the Elder (Beta)
 
@@ -45,7 +44,7 @@ The Elder for someone who has never played Minecraft or even video games at all:
 
 9) Observe the Elder Dimension by flying around, breaking blocks by left-clicking, etc.
 
-Some notes:
+##### Some notes:
 - If you are in Survival mode (by pressing "t" and typing /gamemode survival), at night (/time set night or after ~10 minutes) the Elder will damage you. This can be avoided by using one of our structures.
 
 - The mobs (the giant squirming creatures that just disappear/die) do not yet have AI.

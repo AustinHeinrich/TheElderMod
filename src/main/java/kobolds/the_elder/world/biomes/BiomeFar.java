@@ -2,7 +2,7 @@ package kobolds.the_elder.world.biomes;
 
 import net.minecraft.world.biome.Biome;
 
-public class BiomeFar extends Biome {
+public class BiomeFar extends ElderBiomeBase {
 
 	public BiomeFar() {
         super(new BiomeProperties("Far")

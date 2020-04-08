@@ -1,17 +1,20 @@
 package kobolds.the_elder.world.biomes;
 
+<<<<<<< src/main/java/kobolds/the_elder/world/biomes/BiomeGarden.java
 import kobolds.the_elder.entities.EntityKelpie;
+=======
+import java.util.Random;
+
+>>>>>>> src/main/java/kobolds/the_elder/world/biomes/BiomeGarden.java
 import kobolds.the_elder.entities.EntityWorm;
 import kobolds.the_elder.world.gen.ElderTreeGenerator;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.init.Blocks;
-import net.minecraft.world.biome.Biome;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.gen.feature.WorldGenAbstractTree;
 
-import java.util.Random;
-
-public class BiomeGarden extends Biome {
-
+public class BiomeGarden extends ElderBiomeBase {
 	protected static final ElderTreeGenerator TREE = new ElderTreeGenerator(false, true);
 	
 	public BiomeGarden() {
@@ -41,4 +44,5 @@ public class BiomeGarden extends Biome {
 	public WorldGenAbstractTree getRandomTreeFeature(Random rand) {
 		return TREE;
 	}
+
 }
