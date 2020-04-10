@@ -3,7 +3,7 @@
 
 *Otherwise: The Elder for someone who has never played Minecraft or even video games at all.*
 
-#### To launch the Elder (Beta)
+#### To launch the Elder
 
 ##### Required: 
 - A copy of Minecraft Java Edition (https://www.minecraft.net/en-us/store/minecraft-java-edition/)
@@ -21,7 +21,7 @@
 
 5) Click "Play" at the bottom to launch.
 
-6) Exit out of game and download our "eldermod-beta.jar".
+6) Exit out of game and download our "eldermod-1.0.jar".
 
 7) Place the .jar file in the C:\Users\{USER}\AppData\Roaming\.minecraft\mods folder (for Windows).
 
